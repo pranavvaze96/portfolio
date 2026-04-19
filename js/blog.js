@@ -217,7 +217,7 @@ const posts = [
   },
   {
     id: 'vibe-coding-pm',
-    title: "I'm Built a Full Portfolio Website — Without Writing a Single Line of Code",
+    title: "I Built a Full Portfolio Website — Without Writing a Single Line of Code",
     category: 'Vibe Coding',
     date: 'April 2026',
     readTime: '9 min',
@@ -383,16 +383,16 @@ const posts = [
 /* ═══════════════════════════════════════════════════════════════════
    GALLERY PAGE
 ═══════════════════════════════════════════════════════════════════ */
-const gallery3d        = document.getElementById('gallery-3d');
-const galleryScroll    = document.getElementById('gallery-scroll');
+const gallery3d = document.getElementById('gallery-3d');
+const galleryScroll = document.getElementById('gallery-scroll');
 const galleryInnerHint = document.getElementById('gallery-inner-hint');
 
 if (gallery3d) {
-  const RADIUS     = window.innerWidth < 1100 ? 390 : 480;
+  const RADIUS = window.innerWidth < 1100 ? 390 : 480;
   const ANGLE_STEP = 360 / posts.length;
   const AUTO_SPEED = 0.04;
 
-  let rotation   = 0;
+  let rotation = 0;
   let isScrolling = false;
   let scrollTimer = null;
 
@@ -427,7 +427,7 @@ if (gallery3d) {
   function buildMobileList() {
     const list = document.getElementById('blog-mobile-list');
     posts.forEach(post => {
-      const li  = document.createElement('li');
+      const li = document.createElement('li');
       li.className = 'blog-mobile-item';
 
       const btn = document.createElement('button');
@@ -456,7 +456,7 @@ if (gallery3d) {
   function applyRotation() {
     gallery3d.style.transform = `rotateY(${rotation}deg)`;
     gallery3d.querySelectorAll('.gallery-card-3d').forEach((card, i) => {
-      const combined    = ((i * ANGLE_STEP + rotation) % 360 + 360) % 360;
+      const combined = ((i * ANGLE_STEP + rotation) % 360 + 360) % 360;
       const facingAngle = combined > 180 ? 360 - combined : combined;
       card.style.opacity = Math.max(0.12, 1 - facingAngle / 190);
     });
@@ -472,18 +472,18 @@ if (gallery3d) {
 
   /* ── Scroll drives rotation ─────────────────────────────────────── */
   window.addEventListener('scroll', () => {
-    const rect      = galleryScroll.getBoundingClientRect();
+    const rect = galleryScroll.getBoundingClientRect();
     const scrollable = galleryScroll.offsetHeight - window.innerHeight;
-    const scrolled  = Math.max(0, -rect.top);
-    const progress  = Math.min(1, scrolled / scrollable);
-    rotation        = progress * 420;
+    const scrolled = Math.max(0, -rect.top);
+    const progress = Math.min(1, scrolled / scrollable);
+    rotation = progress * 420;
 
     isScrolling = true;
     clearTimeout(scrollTimer);
     scrollTimer = setTimeout(() => { isScrolling = false; }, 200);
 
     if (scrolled > 60) galleryInnerHint.classList.add('hidden');
-    else               galleryInnerHint.classList.remove('hidden');
+    else galleryInnerHint.classList.remove('hidden');
 
     applyRotation();
   }, { passive: true });
@@ -499,7 +499,7 @@ if (gallery3d) {
 const postArticleEl = document.getElementById('post-article');
 
 if (postArticleEl && !gallery3d) {
-  const id   = new URLSearchParams(window.location.search).get('id');
+  const id = new URLSearchParams(window.location.search).get('id');
   const post = posts.find(p => p.id === id);
 
   if (!post) {
