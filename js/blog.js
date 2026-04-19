@@ -216,21 +216,166 @@ const posts = [
     `
   },
   {
-    id: 'stakeholder-management',
-    title: 'Stakeholder Management at Scale: Notes from the Field',
-    category: 'Leadership',
-    date: 'November 2025',
-    readTime: '6 min',
-    excerpt: 'Managing up, across, and outside the organisation — without losing your mind or your roadmap.',
-    gradient: 'linear-gradient(145deg, #F43F5E 0%, #9F1239 100%)',
+    id: 'vibe-coding-pm',
+    title: "I'm Built a Full Portfolio Website — Without Writing a Single Line of Code",
+    category: 'Vibe Coding',
+    date: 'April 2026',
+    readTime: '9 min',
+    excerpt: "Vibe coding isn't just for developers anymore. Here's why every PM needs to learn it — and how I built a fully animated portfolio site using Claude Code.",
+    gradient: 'linear-gradient(145deg, #431407 0%, #9a3412 55%, #f97316 100%)',
     content: `
-      <p>At MisticusMind, I work with a CEO, CTO, CCSO, a cross-functional team of 17 across India and the US, and enterprise clients at various stages of implementation. Stakeholder management isn't a soft skill I do on the side — it's a core part of the job, every day.</p>
-      <h2>Align on the problem before the solution</h2>
-      <p>The most common source of stakeholder conflict I've seen: two people agreeing on a feature request but disagreeing on the underlying problem. Slow down and surface the problem statement first. "We both want to improve customer retention — is that right? Let's make sure we're solving for the same thing before we debate the solution."</p>
-      <h2>Make your trade-offs legible</h2>
-      <p>Stakeholders escalate when they feel unheard. The antidote isn't agreement — it's acknowledgement. I document every significant trade-off decision: what we chose, what we gave up, why, and who signed off. This creates accountability without creating blame.</p>
-      <h2>The weekly digest nobody asked for</h2>
-      <p>Early in my time at MisticusMind, I started sending a Friday email to leadership: three things that moved, one thing that's stuck, one ask. Nobody asked for it. Within a month, the CEO started forwarding it to board members. The best stakeholder relationships are built through consistent, low-drama communication — not just when something goes wrong.</p>
+      <p class="post-lead">There's a skill gap quietly opening up in product management, and most PMs haven't noticed it yet. It's not about learning to code. It's about something newer, faster, and honestly more fun than either of those things.</p>
+
+      <p>It's called <strong>vibe coding</strong> — and I think it's about to become one of the most valuable skills a product manager can have. Let me show you what I mean.</p>
+
+      <h2><span class="post-section-num">01</span>What I Built</h2>
+
+      <p>A few weeks ago, I built a personal portfolio website from scratch. Not a Wix template. Not a Notion page. A real, custom-designed website with a dark/light theme toggle, smooth scroll animations, a custom animated cursor, a 3D rotating blog gallery, and a responsive layout that works beautifully on every screen size.</p>
+
+      <p>I did it without writing thousands of lines of code. Without a frontend developer. The tools I used? <strong>Antigravity</strong> and <strong>Claude Code</strong>.</p>
+
+      <div class="post-features">
+        <div class="post-feat"><span class="post-feat-dot"></span> Dark / light theme</div>
+        <div class="post-feat"><span class="post-feat-dot"></span> Custom animated cursor</div>
+        <div class="post-feat"><span class="post-feat-dot"></span> Scroll-reveal animations</div>
+        <div class="post-feat"><span class="post-feat-dot"></span> 3D rotating gallery</div>
+        <div class="post-feat"><span class="post-feat-dot"></span> Sticky CV button</div>
+        <div class="post-feat"><span class="post-feat-dot"></span> Mobile responsive</div>
+      </div>
+
+      <p>The site is live at <a href="https://pranavvaze.netlify.app/" target="_blank" rel="noopener">https://pranavvaze.netlify.app/</a> and the code is on <a href="https://github.com/pranavvaze96/portfolio" target="_blank" rel="noopener">GitHub</a> if you want to see what came out the other side.</p>
+
+      <h2><span class="post-section-num">02</span>What Is Vibe Coding?</h2>
+
+      <p>Vibe coding is a term floating around developer circles, but it describes something much broader than coding. The idea is simple: instead of writing code line by line, you <em>describe what you want</em> — the feeling, the functionality, the interaction — and an AI builds it. You react to what you see, refine your description, and iterate.</p>
+
+      <p>There's no rigid spec. No ticket. Just you, the AI, and a clear picture of what you're trying to create. It sounds deceptively simple. But in practice, it's a genuine superpower — especially for people who understand products deeply but don't want to spend their lives in a code editor.</p>
+
+      <div class="post-callout">
+        <p>Which is, by the way, exactly the situation most product managers are in.</p>
+      </div>
+
+      <h2><span class="post-section-num">03</span>Why Vibe Coding Is an Immediate Need for Product Managers</h2>
+
+      <p>This isn't a "nice to have in five years" kind of thing. The PMs who figure this out now are going to have a serious edge.</p>
+
+      <div class="post-reasons">
+        <div class="post-reason">
+          <div class="post-reason-num">01</div>
+          <div class="post-reason-body">
+            <strong>Prototype at the speed of thought</strong>
+            <p>Right now, an idea goes into a doc, then a Figma, then a backlog, then maybe a developer picks it up in two sprints. With vibe coding, you can go from idea to working prototype in an afternoon. That changes every conversation you have with stakeholders, designers, and engineers.</p>
+          </div>
+        </div>
+        <div class="post-reason">
+          <div class="post-reason-num">02</div>
+          <div class="post-reason-body">
+            <strong>Stop depending on engineering bandwidth</strong>
+            <p>One of the most frustrating parts of being a PM is having ideas you can't test because you can't build them yourself. Vibe coding removes that bottleneck. You become someone who shows up with a working thing, not just a slide deck about the working thing.</p>
+          </div>
+        </div>
+        <div class="post-reason">
+          <div class="post-reason-num">03</div>
+          <div class="post-reason-body">
+            <strong>Speak the language of what's actually possible</strong>
+            <p>PMs who understand how products are built make better decisions. Vibe coding deepens that intuition without requiring you to become an engineer. When you've actually built something yourself — even with AI — you understand the complexity in a way reading about it never gives you.</p>
+          </div>
+        </div>
+        <div class="post-reason">
+          <div class="post-reason-num">04</div>
+          <div class="post-reason-body">
+            <strong>AI is changing what "technical" means</strong>
+            <p>Technical skill used to mean syntax. Now it means knowing how to direct, evaluate, and iterate on AI output. That's a product skill. It's systems thinking. It's exactly what good PMs already do — just applied to building instead of specifying.</p>
+          </div>
+        </div>
+        <div class="post-reason">
+          <div class="post-reason-num">05</div>
+          <div class="post-reason-body">
+            <strong>Cross-functional credibility goes through the roof</strong>
+            <p>When you walk into sprint planning having already prototyped the thing you're proposing, the dynamic changes. Engineers respect it. Designers engage differently. Leadership notices. You're no longer the person who writes requirements — you're the person who ships ideas.</p>
+          </div>
+        </div>
+      </div>
+
+      <h2><span class="post-section-num">04</span>How I Actually Built It</h2>
+
+      <p>I came into this with a clear vision and zero interest in spending weeks learning a frontend framework. I used Claude Code inside Antigravity to bring that feeling to life through conversation. My prompts weren't technical — they were descriptive.</p>
+
+      <span class="post-prompts-label">Actual prompts I used</span>
+      <div class="post-prompt-block">I want a cursor that feels like it has personality — a dot that follows the mouse with a trailing ring, and a burst effect when you click.</div>
+      <div class="post-prompt-block">The navbar should feel like liquid glass — blurred, sticky, and elegant.</div>
+      <div class="post-prompt-block">I want my profile photo to tilt slightly when someone hovers over it, like it's reacting to them.</div>
+
+      <p style="margin-top: 2rem;">Each of those became a real, working feature. The AI handled the implementation. I handled the vision, the taste, and the iteration. None of that required me to understand CSS transforms at a deep level, or memorise JavaScript event listeners, or debug browser compatibility issues for hours.</p>
+
+      <h2><span class="post-section-num">05</span>The Moment That Genuinely Surprised Me</h2>
+
+      <div class="post-anecdote">
+        <span class="post-anecdote-label">A real anecdote from building the site</span>
+        <p>I went into this expecting to babysit a lot of details. I expected to make a design change and then have to separately tell Claude Code — <em>"now update the dark mode version, now fix the mobile layout, now reorganise the files."</em> I expected the AI to be good at one thing at a time.</p>
+        <p>That's not what happened.</p>
+        <p>Every time I made a design change — a new section, a tweaked colour, a different layout — Claude Code automatically kept the light and dark theme in sync across the entire site. I never once had to say <em>"now do the same thing for dark mode."</em> It just did it. Consistency across states is one of the hardest things to maintain in a product, and it was handling it quietly in the background the whole time.</p>
+        <p>The mobile view was similar. Claude Code would automatically adapt layouts for smaller screens as we built. Was it perfect? No — I did have to go back and tweak a few things. But the fact that it was thinking about responsiveness without me asking changed the pace of the whole project.</p>
+        <p>And then there was the folder structure. I hadn't even thought about how to organise the files — I was focused on the product, not the architecture. Claude Code structured everything cleanly on its own: separate CSS files for variables, animations, components, and sections. When I eventually looked at the project folder, it looked like something a thoughtful developer had planned from the start.</p>
+      </div>
+
+      <div class="post-callout">
+        <p>You're not just getting code written. You're getting a collaborator that thinks about the whole product, not just the line you asked it to write.</p>
+      </div>
+
+      <h2><span class="post-section-num">06</span>The Skill That Made It Work</h2>
+
+      <p>Here's what I noticed about myself that made vibe coding effective — and I think it's the same for most PMs. I'm good at articulating outcomes. I can describe what something should <em>do</em> and how it should <em>feel</em> with precision. That's literally the job. Writing PRDs, user stories, acceptance criteria — all of it trains you to be specific about desired behaviour.</p>
+
+      <p>Vibe coding rewards exactly that skill. The PMs who will struggle are the ones who are vague. The ones who will thrive are the ones who already write sharp, specific product requirements. Which, if you've been doing this job for a while, is probably you.</p>
+
+      <h2><span class="post-section-num">07</span>What I'd Tell Other PMs</h2>
+
+      <div class="post-tips">
+        <div class="post-tip">
+          <div class="post-tip-icon">🎯</div>
+          <div class="post-tip-body">
+            <strong>Start with something you actually want</strong>
+            <p>Don't build a to-do app as a tutorial exercise. Build something real — a portfolio, a prototype of a feature you've been thinking about, a tool that solves a problem you have. The motivation keeps you iterating.</p>
+          </div>
+        </div>
+        <div class="post-tip">
+          <div class="post-tip-icon">🎨</div>
+          <div class="post-tip-body">
+            <strong>Describe feelings, not specifications</strong>
+            <p>You don't need to know the technical term for what you want. "I want it to feel like it slides in from below as I scroll" is a perfectly good prompt. Trust your product instincts.</p>
+          </div>
+        </div>
+        <div class="post-tip">
+          <div class="post-tip-icon">🔁</div>
+          <div class="post-tip-body">
+            <strong>Expect to iterate</strong>
+            <p>Vibe coding isn't one prompt and done. It's a conversation. The first version gets you 70% there. The next few exchanges get you the rest. That loop is the skill.</p>
+          </div>
+        </div>
+        <div class="post-tip">
+          <div class="post-tip-icon">🚀</div>
+          <div class="post-tip-body">
+            <strong>Don't aim for perfect code — aim for working product</strong>
+            <p>The goal isn't to write beautiful, production-grade software. The goal is to build something real enough to learn from, show to others, or ship. Lower that bar and you'll move much faster.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post-next-banner">
+        <span class="post-next-banner-badge">What's Next</span>
+        <h3>The portfolio was just step one.</h3>
+        <p>As a next step in my vibe coding journey, I'm building an app from scratch — and the scope is a whole level up from a portfolio site. I'll be documenting the journey as I go: the wins, the dead ends, the moments where the AI surprises me, and the moments where I have to take the wheel.</p>
+        <p>Stay tuned for updates. The next one will be a lot more interesting.</p>
+      </div>
+
+      <h2><span class="post-section-num">08</span>The Bigger Picture</h2>
+
+      <p>The PMs who thrive in the next few years won't just be the ones who write the best PRDs. They'll be the ones who can build fast, validate quickly, and show up to every conversation with something tangible. Vibe coding is how you do that without becoming a full-time engineer.</p>
+
+      <p>I built a portfolio website to prove something to myself. That I could take a vision from my head and put it live on the internet, without a team, without a budget, and without compromising on the experience.</p>
+
+      <p>It worked. And I'm not going back to waiting for dev bandwidth to test an idea.</p>
     `
   }
 ];
@@ -238,23 +383,23 @@ const posts = [
 /* ═══════════════════════════════════════════════════════════════════
    GALLERY SETUP
 ═══════════════════════════════════════════════════════════════════ */
-const gallery3d        = document.getElementById('gallery-3d');
-const galleryScroll    = document.getElementById('gallery-scroll');
+const gallery3d = document.getElementById('gallery-3d');
+const galleryScroll = document.getElementById('gallery-scroll');
 const galleryInnerHint = document.getElementById('gallery-inner-hint');
-const galleryView      = document.getElementById('gallery-view');
-const postView         = document.getElementById('post-view');
-const postArticle      = document.getElementById('post-article');
-const postBackBtn      = document.getElementById('post-back-btn');
+const galleryView = document.getElementById('gallery-view');
+const postView = document.getElementById('post-view');
+const postArticle = document.getElementById('post-article');
+const postBackBtn = document.getElementById('post-back-btn');
 
-const RADIUS     = window.innerWidth < 1100 ? 390 : 480;
+const RADIUS = window.innerWidth < 1100 ? 390 : 480;
 const ANGLE_STEP = 360 / posts.length;
 const AUTO_SPEED = 0.04; // deg per frame
 
-let rotation     = 0;
-let isScrolling  = false;
-let scrollTimer  = null;
-let rafId        = null;
-let postIsOpen   = false;
+let rotation = 0;
+let isScrolling = false;
+let scrollTimer = null;
+let rafId = null;
+let postIsOpen = false;
 
 /* ── Build gallery cards ──────────────────────────────────────────── */
 function buildGallery() {
@@ -286,7 +431,7 @@ function buildGallery() {
 function buildMobileList() {
   const list = document.getElementById('blog-mobile-list');
   posts.forEach(post => {
-    const li  = document.createElement('li');
+    const li = document.createElement('li');
     li.className = 'blog-mobile-item';
 
     const btn = document.createElement('button');
@@ -317,8 +462,8 @@ function applyRotation() {
 
   const cards = gallery3d.querySelectorAll('.gallery-card-3d');
   cards.forEach((card, i) => {
-    const cardAngle   = i * ANGLE_STEP;
-    const combined    = ((cardAngle + rotation) % 360 + 360) % 360;
+    const cardAngle = i * ANGLE_STEP;
+    const combined = ((cardAngle + rotation) % 360 + 360) % 360;
     const facingAngle = combined > 180 ? 360 - combined : combined;
     card.style.opacity = Math.max(0.12, 1 - facingAngle / 190);
   });
@@ -336,11 +481,11 @@ function autoRotateLoop() {
 window.addEventListener('scroll', () => {
   if (postIsOpen) return;
 
-  const rect           = galleryScroll.getBoundingClientRect();
-  const scrollable     = galleryScroll.offsetHeight - window.innerHeight;
-  const scrolled       = Math.max(0, -rect.top);
-  const progress       = Math.min(1, scrolled / scrollable);
-  rotation             = progress * 420; // slightly more than one full spin
+  const rect = galleryScroll.getBoundingClientRect();
+  const scrollable = galleryScroll.offsetHeight - window.innerHeight;
+  const scrolled = Math.max(0, -rect.top);
+  const progress = Math.min(1, scrolled / scrollable);
+  rotation = progress * 420; // slightly more than one full spin
 
   isScrolling = true;
   clearTimeout(scrollTimer);
@@ -396,7 +541,7 @@ function openPost(postId) {
 
   // Fade out gallery, then show post
   galleryView.style.transition = 'opacity 0.35s ease';
-  galleryView.style.opacity    = '0';
+  galleryView.style.opacity = '0';
   galleryView.style.pointerEvents = 'none';
 
   setTimeout(() => {
@@ -422,8 +567,8 @@ function closePost() {
     postView.classList.add('post-view--hidden');
     postView.setAttribute('aria-hidden', 'true');
 
-    galleryView.style.display      = '';
-    galleryView.style.opacity      = '0';
+    galleryView.style.display = '';
+    galleryView.style.opacity = '0';
     galleryView.style.pointerEvents = '';
 
     window.scrollTo({ top: 0, behavior: 'instant' });

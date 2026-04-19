@@ -577,6 +577,279 @@
   margin: 0 !important;
 }
 
+/* ═══════════════════════════════════════════════════════════════════
+   VIBE CODING ARTICLE — COMPONENTS
+   All use CSS variables so light/dark themes work automatically
+═══════════════════════════════════════════════════════════════════ */
+
+/* Lead paragraph */
+.post-lead {
+  font-family: var(--font-heading);
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
+  font-style: italic;
+  color: var(--text-muted);
+  border-left: 3px solid var(--accent);
+  padding-left: 1.4rem;
+  margin-bottom: 2.4rem !important;
+  line-height: 1.65;
+}
+
+/* Section number label above h2 */
+.post-section-num {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+
+/* Callout / highlight card */
+.post-callout {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 10px 10px 0;
+  padding: 1.3rem 1.6rem;
+  margin: 2rem 0;
+}
+
+.post-callout p {
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--text-primary) !important;
+  margin-bottom: 0 !important;
+}
+
+.post-callout p + p {
+  margin-top: 0.8rem !important;
+}
+
+/* Prompts label */
+.post-prompts-label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 2rem 0 0.7rem;
+  display: block;
+}
+
+/* Prompt quote block */
+.post-prompt-block {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.1rem 1.4rem 1.1rem 2.4rem;
+  margin: 0.5rem 0;
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--text-muted);
+  position: relative;
+  line-height: 1.65;
+}
+
+.post-prompt-block::before {
+  content: '"';
+  position: absolute;
+  top: -0.2rem;
+  left: 0.9rem;
+  font-size: 2.4rem;
+  color: var(--accent);
+  opacity: 0.4;
+  font-family: var(--font-heading);
+  line-height: 1;
+}
+
+/* Features pill grid */
+.post-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 0.75rem;
+  margin: 1.8rem 0;
+}
+
+.post-feat {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  transition: border-color var(--transition);
+}
+
+.post-feat:hover { border-color: var(--accent); }
+
+.post-feat-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex-shrink: 0;
+}
+
+/* Numbered reasons list */
+.post-reasons { margin: 1.8rem 0; }
+
+.post-reason {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1.2rem;
+  padding: 1.3rem 0;
+  border-bottom: 1px solid var(--border);
+  align-items: start;
+}
+
+.post-reason:last-child { border-bottom: none; }
+
+.post-reason-num {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--accent);
+  opacity: 0.35;
+  line-height: 1;
+  min-width: 2rem;
+}
+
+.post-reason-body strong {
+  display: block;
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 1rem;
+  margin-bottom: 0.35rem;
+}
+
+.post-reason-body p {
+  color: var(--text-muted) !important;
+  font-size: 0.92rem;
+  margin: 0 !important;
+  line-height: 1.65;
+}
+
+/* Anecdote card */
+.post-anecdote {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.8rem 2rem;
+  margin: 2.2rem 0;
+}
+
+.post-anecdote-label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.post-anecdote p {
+  color: var(--text-primary) !important;
+  margin-bottom: 1rem !important;
+}
+
+.post-anecdote p:last-child { margin-bottom: 0 !important; }
+
+/* Tips list */
+.post-tips { margin: 1.8rem 0; }
+
+.post-tip {
+  padding: 1.1rem 0;
+  border-bottom: 1px solid var(--border);
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1.1rem;
+  align-items: start;
+}
+
+.post-tip:last-child { border-bottom: none; }
+
+.post-tip-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 7px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.post-tip-body strong {
+  display: block;
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  margin-bottom: 0.25rem;
+}
+
+.post-tip-body p {
+  color: var(--text-muted) !important;
+  font-size: 0.9rem;
+  margin: 0 !important;
+  line-height: 1.65;
+}
+
+/* Next steps banner */
+.post-next-banner {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-top: 2px solid var(--accent);
+  border-radius: 14px;
+  padding: 2rem;
+  margin: 2.5rem 0;
+  text-align: center;
+}
+
+.post-next-banner-badge {
+  display: inline-block;
+  background: transparent;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.8rem;
+  border-radius: var(--radius-pill);
+  margin-bottom: 0.9rem;
+}
+
+.post-next-banner h3 {
+  font-family: var(--font-heading);
+  font-size: clamp(1.3rem, 2.5vw, 1.7rem);
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+  color: var(--text-primary);
+  font-style: italic;
+}
+
+.post-next-banner p {
+  color: var(--text-muted) !important;
+  font-size: 0.95rem !important;
+  margin: 0 !important;
+}
+
+.post-next-banner p + p { margin-top: 0.6rem !important; }
+
+@media (max-width: 600px) {
+  .post-features { grid-template-columns: 1fr 1fr; }
+}
+
 /* Subtle divider after post */
 .post-end-rule {
   max-width: 740px;
