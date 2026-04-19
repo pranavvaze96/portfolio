@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>I Spent a Month Testing 9 AI Tools. Here's My Honest SWOT.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink: #0f0f0f;
+    --ink-2: #333;
+    --ink-3: #666;
+    --ink-4: #999;
+    --paper: #faf9f6;
+    --paper-2: #f2f0eb;
+    --paper-3: #e8e5de;
+    --rule: #ddd9d0;
+    --green: #0F6E56;
+    --green-bg: #E1F5EE;
+    --amber: #854F0B;
+    --amber-bg: #FAEEDA;
+    --blue: #185FA5;
+    --blue-bg: #E6F1FB;
+    --red: #A32D2D;
+    --red-bg: #FCEBEB;
+    --accent: #C8521A;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'DM Serif Display', Georgia, serif;
+    font-size: 18px;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .sans { font-family: 'DM Sans', system-ui, sans-serif; }
+
+  /* HEADER */
+  header {
+    border-bottom: 1px solid var(--rule);
+    padding: 1.5rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .masthead {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+  }
+  .masthead span { color: var(--accent); }
+  .reading-time {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    color: var(--ink-4);
+    letter-spacing: 0.04em;
+  }
+
+  /* HERO */
+  .hero {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 5rem 2rem 3rem;
+  }
+  .kicker {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .kicker::after {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 40px;
+    background: var(--accent);
+    opacity: 0.5;
+  }
+
+  h1 {
+    font-family: 'DM Serif Display', Georgia, serif;
+    font-size: clamp(2.4rem, 5vw, 3.8rem);
+    line-height: 1.1;
+    font-weight: 400;
+    color: var(--ink);
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+  }
+  h1 em {
+    font-style: italic;
+    color: var(--accent);
+  }
+
+  .deck {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.25rem;
+    font-style: italic;
+    line-height: 1.6;
+    color: var(--ink-3);
+    max-width: 680px;
+    margin-bottom: 2.5rem;
+  }
+
+  .byline-row {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.25rem 0;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    color: var(--ink-3);
+  }
+  .byline-row strong { color: var(--ink); font-weight: 500; }
+
+  .tools-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 2rem;
+  }
+  .tool-pill {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    padding: 4px 12px;
+    border-radius: 100px;
+    border: 1px solid var(--rule);
+    color: var(--ink-3);
+    background: var(--paper-2);
+  }
+
+  /* MAIN LAYOUT */
+  .article-body {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 2rem 6rem;
+  }
+
+  /* INTRO */
+  .intro-block {
+    padding: 3.5rem 0 3rem;
+    border-bottom: 1px solid var(--rule);
+  }
+  .dropcap::first-letter {
+    font-family: 'DM Serif Display', serif;
+    font-size: 4.8rem;
+    font-weight: 400;
+    line-height: 0.82;
+    float: left;
+    margin: 0.08em 0.12em 0 0;
+    color: var(--accent);
+  }
+  p { margin-bottom: 1.4rem; }
+  p:last-child { margin-bottom: 0; }
+
+  /* SWOT GRID */
+  .swot-section {
+    padding: 4rem 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .section-label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ink-4);
+    margin-bottom: 0.5rem;
+  }
+  .section-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+  }
+  .section-sub {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    color: var(--ink-3);
+    margin-bottom: 2.5rem;
+  }
+
+  .swot-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .swot-quad {
+    background: var(--paper);
+    padding: 1.75rem;
+  }
+  .swot-quad-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1.25rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--rule);
+  }
+  .swot-badge {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 100px;
+  }
+  .badge-s { background: var(--green-bg); color: var(--green); }
+  .badge-w { background: var(--amber-bg); color: var(--amber); }
+  .badge-o { background: var(--blue-bg); color: var(--blue); }
+  .badge-t { background: var(--red-bg); color: var(--red); }
+
+  .swot-item { margin-bottom: 1.1rem; }
+  .swot-item:last-child { margin-bottom: 0; }
+  .swot-item-title {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--ink);
+    margin-bottom: 3px;
+  }
+  .swot-item-desc {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    line-height: 1.55;
+    color: var(--ink-3);
+  }
+
+  /* ARTICLE SECTIONS */
+  .content-section {
+    padding: 3.5rem 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .content-section:last-child { border-bottom: none; }
+
+  .section-heading {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  .section-num {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    color: var(--ink-4);
+    min-width: 2ch;
+  }
+  h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.85rem;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+  }
+  h2.green { color: var(--green); }
+  h2.amber { color: var(--amber); }
+  h2.blue  { color: var(--blue);  }
+  h2.red   { color: var(--red);   }
+
+  h3 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--ink);
+    margin: 2rem 0 0.5rem;
+    letter-spacing: 0.01em;
+  }
+  h3::before {
+    content: '—';
+    margin-right: 8px;
+    opacity: 0.35;
+  }
+
+  .body-text {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--ink-2);
+  }
+
+  .pull-quote {
+    margin: 2.5rem 0;
+    padding: 1.5rem 1.75rem;
+    border-left: 3px solid var(--accent);
+    background: var(--paper-2);
+  }
+  .pull-quote p {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.2rem;
+    font-style: italic;
+    line-height: 1.6;
+    color: var(--ink);
+    margin: 0;
+  }
+
+  /* CONCLUSION */
+  .conclusion {
+    padding: 3.5rem 0 2rem;
+  }
+  .conclusion h2 {
+    margin-bottom: 1.5rem;
+  }
+
+  /* FOOTER TOOL LIST */
+  .article-footer {
+    margin-top: 3rem;
+    padding: 1.5rem 1.75rem;
+    background: var(--paper-2);
+    border: 1px solid var(--rule);
+    border-radius: 8px;
+  }
+  .footer-label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink-4);
+    margin-bottom: 0.6rem;
+  }
+  .footer-tools {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    color: var(--ink-3);
+    line-height: 1.8;
+  }
+
+  /* PAGE FOOTER */
+  footer {
+    border-top: 1px solid var(--rule);
+    padding: 2rem;
+    text-align: center;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    color: var(--ink-4);
+    letter-spacing: 0.04em;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 640px) {
+    .swot-grid { grid-template-columns: 1fr; }
+    h1 { font-size: 2.2rem; }
+    header { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+  }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .hero { animation: fadeUp 0.6s ease both; }
+  .swot-quad { transition: background 0.2s; }
+  .swot-quad:hover { background: var(--paper-2); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="masthead sans">The AI Dispatch &nbsp;·&nbsp; <span>Personal Experiment</span> &nbsp;·&nbsp; April 2026</div>
+  <div class="reading-time sans">9 min read</div>
+</header>
+
+<article>
+  <div class="hero">
+    <div class="kicker sans">Field notes</div>
+    <h1>I spent a month testing 9 AI tools.<br><em>Here's my honest SWOT.</em></h1>
+    <p class="deck">Claude, Google AI Studio, Figma Make, Higgsfield, NotebookLM, Whispr Flow, ElevenLabs, Emergent, and Suno — the strengths that genuinely impressed me, the weaknesses nobody warns you about, and the threats worth taking seriously.</p>
+    <div class="byline-row sans">
+      <span>By <strong>a curious experimenter</strong></span>
+      <span>·</span>
+      <span>April 2026</span>
+    </div>
+    <div class="tools-strip">
+      <span class="tool-pill">Claude</span>
+      <span class="tool-pill">Google AI Studio</span>
+      <span class="tool-pill">Figma Make</span>
+      <span class="tool-pill">Higgsfield</span>
+      <span class="tool-pill">NotebookLM</span>
+      <span class="tool-pill">Whispr Flow</span>
+      <span class="tool-pill">ElevenLabs</span>
+      <span class="tool-pill">Emergent</span>
+      <span class="tool-pill">Suno</span>
+    </div>
+  </div>
+
+  <div class="article-body">
+
+    <!-- INTRO -->
+    <div class="intro-block">
+      <p class="body-text dropcap">There's a certain kind of chaos that happens when you give yourself permission to just <em>try everything</em>. One minute you're generating a full song on Suno, the next you're watching Higgsfield turn a two-line prompt into something that looks like it belongs in a film reel. At some point I had nine AI tools open in different tabs and genuinely forgot which one I was supposed to be focused on.</p>
+      <p class="body-text">So I stepped back and did what any slightly overwhelmed person does — I made a framework. Here's my honest SWOT breakdown of the tools I've been living inside.</p>
+    </div>
+
+    <!-- SWOT GRID -->
+    <div class="swot-section">
+      <div class="section-label sans">Overview</div>
+      <div class="section-title">The full picture at a glance</div>
+      <p class="section-sub sans">All four quadrants — before we go deep on each one.</p>
+
+      <div class="swot-grid">
+        <!-- STRENGTHS -->
+        <div class="swot-quad">
+          <div class="swot-quad-header">
+            <span class="swot-badge badge-s">Strengths</span>
+          </div>
+          <div class="swot-item">
+            <div class="swot-item-title">Genuinely impressive reasoning</div>
+            <div class="swot-item-desc">Claude handles nuanced, multi-step problems with depth that still surprises.</div>
+          </div>
+          <div class="swot-item">
+            <div class="swot-item-title">Voice &amp; audio that sounds human</div>
+            <div class="swot-item-desc">ElevenLabs and Whispr Flow make voice I/O feel natural — not robotic.</div>
+          </div>
+          <div class="swot-item">
+            <div class="swot-item-title">Research you can trust</div>
+            <div class="swot-item-desc">NotebookLM grounds responses in your actual documents. No hallucinations.</div>
+          </div>
+          <div class="swot-item">
+            <div class="swot-item-title">Creativity on demand</div>
+            <div class="swot-item-desc">Suno and Higgsfield removed the creative barrier entirely.</div>
+          </div>
+        </div>
+
+        <!-- WEAKNESSES -->
+        <div class="swot-quad">
+          <div class="swot-quad-header">
+            <span class="swot-badge badge-w">Weaknesses</span>
+          </div>
+          <div class="swot-item">
+            <div class="swot-item-title">The context window problem</div>
+            <div class="swot-item-desc">Long sessions drift. AI tools forget earlier context and lose the thread.</div>
+          </div>
+          <div class="swot-item">
+            <div class="swot-item-title">Fragmented workflow</div>
+            <div class="swot-item-desc">Nine tools, nine tabs, nine pricing tiers. No single hub — yet.</div>
+          </div>
+          <div class="swot-item">
+            <div class="swot-item-title">Inconsistent output quality</div>
+            <div class="swot-item-desc">Figma Make and Emergent can impress then immediately miss.</div>
+          </div>
+          <div class="swot-item">
+            <div class="swot-item-title">Steep curve in disguise</div>
+            <div class="swot-item-desc">Google AI Studio rewards deep parameter knowledge most beginners skip.</div>
+          </div>
+        </div>
+
+        <!-- OPPORTUNITIES -->
+        <div class="swot-quad">
+          <div class="swot-quad-header">
+            <span class="swot-badge badge-o">Opportunities</span>
+          </div>
+          <div class="swot-item">
+            <div class="swot-item-title">The solo creator is now a studio</div>
+            <div class="swot-item-desc">Suno + Higgsfield + ElevenLabs = a music video pipeline for one person.</div>
+          </div>
+          <div class="swot-item">
+            <div class="swot-item-title">Compounding tools = compounding value</div>
+            <div class="swot-item-desc">Chain outputs across tools and what you produce multiplies.</div>
+          </div>
+          <div class="swot-item">
+            <div class="swot-item-title">Apps without engineers</div>
+            <div class="swot-item-desc">Emergent and Figma Make make execution no longer the bottleneck.</div>
+          </div>
+          <div class="swot-item">
+            <div class="swot-item-title">Deep learning at your pace</div>
+            <div class="swot-item-desc">NotebookLM is like a tutor living inside your own documents.</div>
+          </div>
+        </div>
+
+        <!-- THREATS -->
+        <div class="swot-quad">
+          <div class="swot-quad-header">
+            <span class="swot-badge badge-t">Threats</span>
+          </div>
+          <div class="swot-item">
+            <div class="swot-item-title">Skill atrophy is real</div>
+            <div class="swot-item-desc">When AI always starts your draft, the blank-page muscle quietly weakens.</div>
+          </div>
+          <div class="swot-item">
+            <div class="swot-item-title">Deepfake potential</div>
+            <div class="swot-item-desc">ElevenLabs + Higgsfield can clone voice and face convincingly.</div>
+          </div>
+          <div class="swot-item">
+            <div class="swot-item-title">Copyright in murky waters</div>
+            <div class="swot-item-desc">AI-generated music, video, and writing sit in unsettled legal territory.</div>
+          </div>
+          <div class="swot-item">
+            <div class="swot-item-title">Tool churn &amp; subscription fatigue</div>
+            <div class="swot-item-desc">Fast-moving tools can pivot, get acquired, or price you out overnight.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 1: STRENGTHS -->
+    <div class="content-section">
+      <div class="section-heading">
+        <span class="section-num sans">01</span>
+        <h2 class="green">Strengths — the stuff that actually blew my mind</h2>
+      </div>
+
+      <h3>Genuinely impressive reasoning <span style="color:#999;font-weight:400">(Claude)</span></h3>
+      <p class="body-text">The reasoning quality on Claude is something I keep coming back to. Not just "it answered my question," but the kind of back-and-forth where it pushes back on your assumptions, catches contradictions, and builds complex documents that hold together. It's the tool I trust most for anything that requires actual thinking.</p>
+
+      <h3>A research companion you can trust <span style="color:#999;font-weight:400">(NotebookLM)</span></h3>
+      <p class="body-text">NotebookLM quietly became my favorite tool in the stack. Upload your notes, PDFs, or articles, and it talks to you about your own material. No hallucinating sources that don't exist. No generic summaries. It's grounded, which is rare — and invaluable when accuracy matters.</p>
+
+      <div class="pull-quote">
+        <p>NotebookLM talks to you about your own material. No hallucinating sources. It's grounded, which is rare — and invaluable when accuracy matters.</p>
+      </div>
+
+      <h3>Voice and audio that sounds human <span style="color:#999;font-weight:400">(ElevenLabs + Whispr Flow)</span></h3>
+      <p class="body-text">ElevenLabs and Whispr Flow together changed how I work. Voice transcription accurate enough to dictate full documents. Voice output that doesn't make you cringe. These sound like small things until you've used them and realize you haven't opened a keyboard in an hour.</p>
+
+      <h3>Creativity on demand <span style="color:#999;font-weight:400">(Suno + Higgsfield)</span></h3>
+      <p class="body-text">Suno produces complete, stylized music tracks. Higgsfield generates cinematic video that would've required a production team two years ago. The barrier to making things is essentially zero — and that's both exciting and slightly unnerving.</p>
+    </div>
+
+    <!-- SECTION 2: WEAKNESSES -->
+    <div class="content-section">
+      <div class="section-heading">
+        <span class="section-num sans">02</span>
+        <h2 class="amber">Weaknesses — let's be real</h2>
+      </div>
+
+      <h3>The context window problem <span style="color:#999;font-weight:400">(all tools)</span></h3>
+      <p class="body-text">The biggest frustration? Long conversations drift. AI tools forget earlier context, repeat themselves, or lose the thread on complex, multi-stage projects. The longer your session, the more you feel the seams. It's the single biggest limitation that power users hit.</p>
+
+      <h3>No connective tissue — workflow fragmentation</h3>
+      <p class="body-text">Nine tools, nine accounts, nine pricing tiers. You end up spending mental energy managing your toolkit instead of creating. The ideal — a single hub that does everything well — doesn't exist yet.</p>
+
+      <h3>Inconsistent output quality <span style="color:#999;font-weight:400">(Figma Make + Emergent)</span></h3>
+      <p class="body-text">Figma Make and Emergent can generate something genuinely impressive, then on the very next prompt produce something completely off. You can't always figure out why, which makes building reliable, repeatable workflows tricky.</p>
+
+      <div class="pull-quote">
+        <p>Prompting is a real skill. Google AI Studio rewards people who understand temperature settings, system prompts, and model selection. The surface looks simple. The depth rewards those who invest.</p>
+      </div>
+
+      <h3>A steep learning curve disguised as simplicity <span style="color:#999;font-weight:400">(Google AI Studio)</span></h3>
+      <p class="body-text">Google AI Studio looks approachable, but getting great results consistently takes real practice. Temperature settings, system prompts, model selection — the depth rewards those who invest time, but frustrates beginners who expect magic from the start.</p>
+    </div>
+
+    <!-- SECTION 3: OPPORTUNITIES -->
+    <div class="content-section">
+      <div class="section-heading">
+        <span class="section-num sans">03</span>
+        <h2 class="blue">Opportunities — where this gets exciting</h2>
+      </div>
+
+      <h3>The solo creator is now a studio</h3>
+      <p class="body-text">This is not hyperbole. One person with Suno, Higgsfield, and ElevenLabs can produce a music video with professional polish. Chain Claude's writing with ElevenLabs narration and Higgsfield visuals and you have a content pipeline that would've required a 3-person team not long ago. The leverage is almost uncomfortable.</p>
+
+      <div class="pull-quote">
+        <p>One person with Suno, Higgsfield, and ElevenLabs can produce a music video with professional polish. The leverage is almost uncomfortable.</p>
+      </div>
+
+      <h3>Apps without engineers <span style="color:#999;font-weight:400">(Emergent + Figma Make)</span></h3>
+      <p class="body-text">These tools are doing something more profound than making design easier — they're removing execution as a bottleneck. If you have an idea for an app or a product, the gap between "I have this idea" and "I have this thing" is shrinking fast. That's not just a convenience; it's a shift in who gets to build things.</p>
+
+      <h3>Learning deeply at your own pace <span style="color:#999;font-weight:400">(NotebookLM)</span></h3>
+      <p class="body-text">Upload a dense academic paper, your personal research notes, a podcast transcript — then have a conversation with it. It's like having a tutor inside your documents, available at any hour, who actually read everything you uploaded.</p>
+    </div>
+
+    <!-- SECTION 4: THREATS -->
+    <div class="content-section">
+      <div class="section-heading">
+        <span class="section-num sans">04</span>
+        <h2 class="red">Threats — the part worth taking seriously</h2>
+      </div>
+
+      <h3>Skill atrophy is real</h3>
+      <p class="body-text">The dependence thing creeps in quietly. When every first draft starts with AI, the muscle for starting from scratch weakens. I noticed it around week three — I'd open a blank doc and immediately feel the pull to prompt something. That's worth paying attention to, especially for people who write or create professionally.</p>
+
+      <h3>Deepfake and misinformation potential <span style="color:#999;font-weight:400">(ElevenLabs + Higgsfield)</span></h3>
+      <p class="body-text">ElevenLabs and Higgsfield together can clone a voice and generate realistic video. The same capabilities that make them exciting to experiment with are genuinely concerning at scale. The tools aren't the problem — but the potential for misuse is not hypothetical, and it's moving faster than the regulation around it.</p>
+
+      <div class="pull-quote">
+        <p>The same capabilities that make ElevenLabs and Higgsfield exciting are genuinely concerning at scale. The potential for misuse is not hypothetical.</p>
+      </div>
+
+      <h3>Copyright in murky waters <span style="color:#999;font-weight:400">(Suno + Higgsfield)</span></h3>
+      <p class="body-text">Suno's music, Higgsfield's video, and AI-generated writing all sit in legal territory that lawyers and courts are still actively defining. Something you build a workflow around today might face challenges tomorrow. Proceed with awareness, especially for commercial use.</p>
+
+      <h3>Tool churn and subscription fatigue</h3>
+      <p class="body-text">These tools charge monthly, they change fast, and the one you've built your process around can pivot its pricing, get acquired, or simply disappear. Don't build too deep a dependency on any single tool until it's shown some staying power.</p>
+    </div>
+
+    <!-- CONCLUSION -->
+    <div class="conclusion">
+      <h2>The honest summary</h2>
+      <p class="body-text">This stack of tools is the most genuinely useful collection of software I've ever experimented with — and also the most chaotic. The strengths are real, the weaknesses are manageable, the opportunities are enormous, and the threats deserve more conversation than they're currently getting.</p>
+      <p class="body-text">The right approach? Start with two or three that solve a real problem for you. Build from there. Let the workflow develop naturally rather than trying to use all nine at once just because they're available.</p>
+      <p class="body-text" style="font-style:italic">And maybe don't open all nine tabs at the same time.</p>
+
+      <div class="article-footer">
+        <div class="footer-label">Tools covered in this article</div>
+        <div class="footer-tools">Claude &nbsp;·&nbsp; Google AI Studio &nbsp;·&nbsp; Figma Make &nbsp;·&nbsp; Higgsfield &nbsp;·&nbsp; NotebookLM &nbsp;·&nbsp; Whispr Flow &nbsp;·&nbsp; ElevenLabs &nbsp;·&nbsp; Emergent &nbsp;·&nbsp; Suno</div>
+      </div>
+    </div>
+
+  </div>
+</article>
+
+<footer class="sans">
+  &copy; 2026 &nbsp;·&nbsp; Personal field notes &nbsp;·&nbsp; All opinions are the author's own
+</footer>
+
+</body>
+</html>
