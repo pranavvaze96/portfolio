@@ -1,0 +1,82 @@
+/* ─── SCROLL REVEAL ──────────────────────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition-delay: var(--delay, 0ms);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .role-item,
+  .edu-item {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .role-item::before,
+  .edu-item::before {
+    height: 100% !important;
+    transition: none;
+  }
+}
+
+/* ─── BOUNCE (hero scroll indicator) ────────────────────────────── */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(6px); }
+}
+
+/* ─── MARQUEE ────────────────────────────────────────────────────── */
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.marquee-wrapper {
+  overflow: hidden;
+  position: relative;
+}
+
+.marquee-track {
+  display: flex;
+  gap: 0;
+  animation: marquee-scroll 25s linear infinite;
+  white-space: nowrap;
+  will-change: transform;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+.marquee-item {
+  flex-shrink: 0;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--text-primary);
+  padding: 0 24px;
+  letter-spacing: 0.01em;
+}
+
+.marquee-sep {
+  flex-shrink: 0;
+  color: var(--border);
+  font-size: 14px;
+  padding: 0 4px;
+}

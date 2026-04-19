@@ -1,0 +1,49 @@
+/* ─── DESIGN TOKENS ─────────────────────────────────────────────── */
+:root {
+  --bg-primary:    #FFFFFF;
+  --bg-surface:    #F7F7F5;
+  --bg-contact:    #111111;
+  --text-primary:  #111111;
+  --text-muted:    #888888;
+  --border:        #E0E0E0;
+  --tag-bg:        #EBEBEB;
+  --tag-text:      #555555;
+  --footer-bg:     #111111;
+  --footer-text:   #FFFFFF;
+  --card-bg:       #FFFFFF;
+  --shadow-sm:     0 2px 12px rgba(0, 0, 0, 0.06);
+  --shadow-md:     0 8px 32px rgba(0, 0, 0, 0.12);
+  --radius-card:   14px;
+  --radius-pill:   999px;
+  --transition:    0.3s ease;
+  --font-heading:  'DM Serif Display', Georgia, serif;
+  --font-body:     'Inter', system-ui, sans-serif;
+  --text-hero:     clamp(42px, 6.5vw, 80px);
+  --text-h2:       clamp(36px, 5vw, 60px);
+  --text-h3:       clamp(20px, 2.5vw, 26px);
+  --text-body:     18px;
+  --text-small:    14px;
+  --text-label:    11px;
+  --accent:        #06B6D4;
+  --accent-hover:  #0891B2;
+  --accent-subtle: #ECFEFF;
+}
+
+[data-theme="dark"] {
+  --bg-primary:    #0F0F0F;
+  --bg-surface:    #1A1A1A;
+  --bg-contact:    #080808;
+  --text-primary:  #F0F0F0;
+  --text-muted:    #666666;
+  --border:        #2A2A2A;
+  --tag-bg:        #222222;
+  --tag-text:      #AAAAAA;
+  --footer-bg:     #0A0A0A;
+  --footer-text:   #F0F0F0;
+  --card-bg:       #1A1A1A;
+  --shadow-sm:     0 2px 12px rgba(0, 0, 0, 0.3);
+  --shadow-md:     0 8px 32px rgba(0, 0, 0, 0.5);
+  --accent:        #06B6D4;
+  --accent-hover:  #22D3EE;
+  --accent-subtle: #164E63;
+}

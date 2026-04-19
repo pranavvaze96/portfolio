@@ -1,0 +1,136 @@
+/* ─── RESET ──────────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  color: var(--text-primary);
+  background: var(--bg-primary);
+  transition: background var(--transition), color var(--transition);
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ─── CUSTOM CURSOR (desktop only) ──────────────────────────────── */
+@media (pointer: fine) {
+  *, *::before, *::after { cursor: none !important; }
+
+  .cursor-dot,
+  .cursor-ring {
+    position: fixed;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 99999;
+    transform: translate(-50%, -50%);
+    will-change: left, top;
+  }
+
+  /* Inner filled dot — sits exactly on the mouse */
+  .cursor-dot {
+    width: 9px;
+    height: 9px;
+    background: #06B6D4;
+    box-shadow: 0 0 8px rgba(6, 182, 212, 0.7);
+    transition: opacity 0.2s, transform 0.15s;
+  }
+
+  /* Outer ring — lags behind via JS lerp */
+  .cursor-ring {
+    width: 36px;
+    height: 36px;
+    border: 1.5px solid;
+    background: transparent;
+    transition: opacity 0.2s, border-color 0.3s, transform 0.15s;
+  }
+
+  /* Theme-aware ring colour */
+  :root .cursor-ring          { border-color: rgba(0, 0, 0, 0.35); }
+  [data-theme="dark"] .cursor-ring { border-color: rgba(255, 255, 255, 0.45); }
+
+  /* Hover state: dot grows, ring shrinks to meet it */
+  body.cursor-hover .cursor-dot  { transform: translate(-50%, -50%) scale(1.6); }
+  body.cursor-hover .cursor-ring { transform: translate(-50%, -50%) scale(0.72); border-color: #06B6D4; }
+
+  /* Click burst: ring expands and fades */
+  @keyframes cursor-burst {
+    0%   { transform: translate(-50%, -50%) scale(1);   opacity: 1; }
+    60%  { opacity: 0.5; }
+    100% { transform: translate(-50%, -50%) scale(4.5); opacity: 0; }
+  }
+
+  .cursor-ring.burst {
+    animation: cursor-burst 0.45s cubic-bezier(0.2, 0.8, 0.4, 1) forwards;
+  }
+
+  /* Hide when mouse leaves page */
+  .cursor-dot.hidden,
+  .cursor-ring.hidden { opacity: 0; }
+}
+
+/* ─── SKIP LINK ──────────────────────────────────────────────────── */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  padding: 0.5rem 1rem;
+  background: var(--text-primary);
+  color: var(--bg-primary);
+  font-size: var(--text-small);
+  border-radius: var(--radius-pill);
+  z-index: 9999;
+  transition: top 0.2s;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* ─── LAYOUT UTILITIES ───────────────────────────────────────────── */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 clamp(20px, 5vw, 80px);
+}
+
+.section-pad {
+  padding: clamp(80px, 12vw, 160px) 0;
+}
+
+.label {
+  font-family: var(--font-body);
+  font-size: var(--text-label);
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+/* ─── FOCUS STYLES ───────────────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--text-primary);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ─── SELECTION ──────────────────────────────────────────────────── */
+::selection {
+  background: var(--accent);
+  color: #fff;
+}

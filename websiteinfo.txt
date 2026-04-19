@@ -1,0 +1,607 @@
+PM with a knack for AI products — turning ambiguity into roadmaps, and roadmaps into launches.================================================================================
+  PERSONAL PORTFOLIO WEBSITE — DESIGN & CONTENT REFERENCE DOCUMENT
+  Based on analysis of: dousanmiao.com + nataliatimea.com/cv
+================================================================================
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  1. NAME
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  [PRANAV VAZE]
+  — Displayed in all-caps or title case in the nav/header logo wordmark
+  — Example treatment from reference: "DOUSAN MIAO" in small-caps nav label
+  — Secondary format for footer: First + Last name in regular weight
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  2. TAGLINE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+"From messy problems to shipped products."
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  3. ONE-LINER
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+"Hey - I am Pranav. I am a PM with a knack for AI products — turning ambiguity into roadmaps, and roadmaps into launches. 
+I’ve worked on everything from early-stage startups to large platforms.
+
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  4. PERSONAL BRAND VOICE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  Derived from dousanmiao.com and nataliatimea.com/cv:
+
+  Tone Attributes:
+  — Confident, not arrogant
+  — Minimal, not cold
+  — Human, not corporate
+  — Clear and direct (short sentences, no fluff)
+  — Global sensibility (London/Rotterdam vibes: understated European design)
+
+  Writing Style:
+  — First-person ("I design", "I worked", "I take pride")
+  — Active voice throughout
+  — Light use of em-dashes for rhythm
+  — Minimal punctuation flourish; periods over exclamation marks
+  — Section labels: short uppercase labels ("WORKS", "ABOUT", "SHIPPED")
+  — Use of year ranges instead of "January 2022–March 2023"
+
+  What to avoid:
+  — Buzzword soup ("synergy", "leverage", "passionate about")
+  — Third-person bios
+  — Over-explaining; let the work speak
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  5. COLORS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  LIGHT MODE (from dousanmiao.com):
+  — Background:        #FFFFFF (pure white)
+  — Surface/Card:      #F4F4F2 (warm off-white / light gray)
+  — Primary Text:      #111111 (near-black)
+  — Secondary Text:    #888888 (muted gray for captions/labels)
+  — Accent:            #111111 (same as text — no color accent, monochrome)
+  — Border/Divider:    #E0E0E0 (subtle light gray)
+  — Tag/Badge bg:      #EBEBEB with #555 text
+
+  DARK MODE (inferred from typical Framer dark toggle):
+  — Background:        #0F0F0F (deep dark, not pure black)
+  — Surface/Card:      #1A1A1A
+  — Primary Text:      #F0F0F0
+  — Secondary Text:    #666666
+  — Accent:            #F0F0F0 (inverted, still monochrome)
+  — Border/Divider:    #2A2A2A
+
+  nataliatimea.com color observations:
+  — Very similar palette: off-white background, black text, zero hue
+  — One unique addition: occasional warm cream (#FAF8F5) instead of pure white
+
+  RECOMMENDED ACCENT OPTIONS (pick one to break pure monochrome):
+  — Option A: Cyan            #2bfefaff
+  — Option B: Purple          #af65f4ff
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  6. DESIGN LANGUAGE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  Overall Aesthetic:
+  — Brutalist-minimal hybrid: large type, ample white space, raw layout grid
+  — Editorial magazine influence: treated like a high-end print layout
+  — Anti-decoration: every element is functional; no decorative icons or blobs
+
+  Typography:
+  — Headings:     Variable-weight serif OR extended grotesque sans-serif
+                  Examples: "Neue Montreal", "Editorial New", "PP Mori"
+                  Rendered at extreme sizes (80–160px for hero)
+  — Body:         Clean grotesque: "Inter", "DM Sans", or "Geist"
+                  16–18px base size, 1.6–1.8 line height
+  — Labels/Tags:  11–12px, ALL CAPS, tracked out (letter-spacing: 0.1em)
+  — Mixed scale:  Intentional contrast between massive headers and small body
+
+  Layout:
+  — 12-column grid, generous gutters (24–40px)
+  — Max content width: 1200–1440px, centered
+  — Asymmetric two-column layouts in about/resume sections
+  — Full-bleed image cards in projects section
+
+  Motion & Interaction:
+  — Smooth scroll between sections (no snap scrolling on main page)
+  — Fade-up on scroll reveal for section headings and cards
+  — Hover states: subtle underline slide or opacity shift (0.6 → 1.0)
+  — Arrow icons rotate on hover (45° → 0° for external links)
+  — No heavy animations; transitions max 0.3s ease
+
+  Border Radius:
+  — Cards: 12–16px
+  — Buttons: fully rounded pill (999px) OR sharp square (0px) — pick one
+  — Images in about section: 12px radius
+
+  Shadows:
+  — Minimal or none in light mode
+  — Cards: box-shadow: 0 2px 12px rgba(0,0,0,0.06)
+  — Elevated modals: box-shadow: 0 8px 32px rgba(0,0,0,0.12)
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  7. NAVIGATION MENU
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  Structure (from dousanmiao.com reference):
+  — Sticky top navbar, minimal height (56–64px)
+  — Left side:  Logo / Name wordmark → links to home (#top)
+  — Center:     Primary anchor links (scroll-spy active state)
+  — Right side: CTA button ("Download CV" or "Say Hi →")
+
+  Page 1 nav links:
+    About | Resume | Projects | Blogs | Contact
+
+  Page 2 nav links (Blog page):
+    ← Back | Blog | [optional: categories dropdown]
+
+  Mobile Nav:
+  — Hamburger → full-screen overlay menu
+  — Large type links, centered
+  — Subtle close button top-right
+  — Background: same as page bg (no dark overlay needed)
+
+  Active State:
+  — Underline dot below active link OR
+  — Color shift to primary text (from secondary gray)
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  8. HERO SECTION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  Layout (from dousanmiao.com):
+  — Full viewport height (100vh) on first load
+  — Left column (60%): Text content
+  — Right column (40%): Possibly a portrait photo or left empty (negative space)
+
+  Content Hierarchy:
+  1. Small label (12px caps):  "HEY – I'M PRANAV"
+  2. Sub-intro (body, 18px):   ONE LINER
+  3. Main headline (H1, 72–120px): TAGLINE  
+  4. Location badge:           Pill tag: "📍 PUNE, INDIA"
+  5. Social link:              LinkedIn icon + label, small
+  6. CTA Row:                  "Let's talk" label + "Drop me a line →" link
+
+  Visual Details:
+  — Headline uses font-weight contrast: thin + bold mixed
+  — Background: clean white or very subtle grain texture
+  — Bottom of hero: section label "SCROLL" with animated arrow, or fade into
+    the next section seamlessly
+
+  Hero Scroll Behavior:
+  — On scroll, hero fades/slides out
+  — Nav becomes more prominent (slight background blur)
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  9. SHADERS / BACKGROUNDS (Light & Dark Mode + Toggle)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  LIGHT MODE Background:
+  — Primary: Pure white #FFFFFF
+  — Subtle grain overlay: SVG or CSS noise texture at 3–5% opacity
+  — Hero: optionally a very faint radial gradient from warm cream center
+    Example: radial-gradient(ellipse at 30% 40%, #FFF8F0 0%, #FFFFFF 60%)
+  — No heavy gradients or blobs — the Dousan site is nearly flat
+
+  DARK MODE Background:
+  — Primary: #0F0F0F (not pure black — has warmth)
+  — Grain texture same approach but lightened grain at ~4% opacity
+  — Cards surface: #1A1A1A
+  — Subtle dark radial: radial-gradient(ellipse at 70% 20%, #1C1C1C 0%, #0F0F0F 70%)
+
+  TOGGLE BUTTON:
+  — Placement: top-right of navbar alongside CTA
+  — Design: Sun ☀ / Moon 🌙 icon, 32×32px, circular button
+  — Transition: CSS custom properties swap with 0.3s ease on body
+  — Persist preference: localStorage key "theme"
+
+  SECTION BACKGROUNDS (variation):
+  — Hero: white / #0F0F0F
+  — About: off-white #F7F7F5 / #141414
+  — Projects: white / #0F0F0F
+  — Resume: #F7F7F5 / #141414 (alternating rhythm)
+  — Contact: near-black #111111 / #080808 (inverted feel for contrast)
+  — Footer: #111111 (same in both modes — always dark)
+
+  CSS Variable Structure:
+  :root {
+    --bg-primary:    #FFFFFF;
+    --bg-surface:    #F7F7F5;
+    --text-primary:  #111111;
+    --text-muted:    #888888;
+    --border:        #E0E0E0;
+    --footer-bg:     #111111;
+    --footer-text:   #FFFFFF;
+  }
+  [data-theme="dark"] {
+    --bg-primary:    #0F0F0F;
+    --bg-surface:    #1A1A1A;
+    --text-primary:  #F0F0F0;
+    --text-muted:    #666666;
+    --border:        #2A2A2A;
+    --footer-bg:     #0A0A0A;
+    --footer-text:   #F0F0F0;
+  }
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  10. ABOUT SECTION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  Layout (dousanmiao.com reference):
+  — Two-column layout on desktop
+  — Left (65%): Long-form bio in large body text (20–22px), 2 paragraphs
+  — Right (35%): Portrait photo with a casual caption underneath
+  — Below: Horizontal list of skill/expertise tags in large scrolling type
+
+  Content Structure:
+  1. Section label: "About" or "# About" in H2
+  2. Bio paragraph 1: Current role + company + what you build
+  3. Bio paragraph 2: Previous experience + personal interest
+  4. Portrait image: Natural/candid headshot, not a corporate headshot
+  5. Caption under photo: "What I look like on a good day" (light/playful)
+  6. Skills marquee: Horizontal auto-scrolling ticker of skills
+     Example items: "User Research · Product Design · System Design · 
+     Frontend Dev · Leadership · Open Source · Writing · Speaking"
+
+  Design Notes:
+  — Bio text renders in a heavier weight to create editorial density
+  — Photo is slightly oversized (taller than the text column)
+  — Rounded corners on photo: 12–16px
+  — Soft background color shift (#F7F7F5) for this section
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  11. RESUME SECTION
+  (Design Reference: nataliatimea.com/cv — scrollable single-page CV layout)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  OVERALL DESIGN PHILOSOPHY (from nataliatimea.com/cv):
+  — The CV lives as a scrollable section within the portfolio — NOT a PDF popup
+  — It feels like a long-form editorial page, not a traditional résumé
+  — Clear typographic hierarchy: Year range → Role → Company → Description
+  — No tables, no icons, no progress bars — pure typography and whitespace
+  — Subtle left-border or indented structure to indicate hierarchy
+
+  LAYOUT:
+  — Full-width single column (max 800px centered) OR
+  — Two-column: Left (dates/company) 30% | Right (role/description) 70%
+  — Background: slightly off-white section (#F7F7F5) to distinguish from
+    surrounding sections
+  — Sections separated by thin horizontal rules or generous vertical spacing
+
+  CONTENT BLOCKS (in order, mirroring nataliatimea.com/cv structure):
+
+  ① About / Summary (optional short version)
+    — 3–4 sentence professional summary
+    — Displayed at top of CV section before experience
+
+  ② Work Experience
+    For each role:
+    — Year range:    "2022–Present"  (small, muted, left or top)
+    — Job Title:     Bold, large text  e.g. "Senior Engineer"
+    — Company:       Regular weight, linked if company has public site
+    — Description:   1–3 line paragraph (NOT a bulleted list) describing
+                     impact and scope — matching nataliatimea's prose style
+    — Divider:       Thin border-bottom between roles
+
+    Example from nataliatimea.com:
+    "2025-present / Designer / Freelance
+     Help clients translate their brand into ready-to-launch websites..."
+
+  ③ Education
+    — Degree name, Institution name (linked)
+    — Year or year range
+    — 1–2 sentence description of what was studied / notable projects
+
+  ④ Tools & Skills
+    — Simple comma-separated or pill-chip list
+    — NOT a percentage bar or star rating — just a clean tag list
+    — Example: "Figma, Framer, React, TypeScript, Node.js, Notion"
+
+  ⑤ Features / Recognition (optional)
+    — Linked list of press mentions, conference talks, open source projects
+    — Small font, external link arrow icon
+
+  TYPOGRAPHY IN RESUME:
+  — Year/Date label:    11px, ALL CAPS, muted color (#888)
+  — Job Title:          18–22px, semi-bold
+  — Company Name:       16px, regular, linked with subtle underline
+  — Description body:   15–16px, regular, line-height 1.7
+  — Section headers:    14px, ALL CAPS, tracked, with a top border line
+
+  SCROLLABLE BEHAVIOR:
+  — The resume section scrolls naturally with the page (no inner scroll container)
+  — Section anchored at #resume in nav
+  — On mobile: collapses to single column, dates float above titles
+  — Sticky "Download CV" button floats at bottom-right of viewport when the
+    resume section is in view (position: sticky or fixed with IntersectionObserver)
+
+  DOWNLOAD CV CTA:
+  — Button: "↓ Download CV" — pill shape, dark background, white text
+  — Appears both at the top of the resume section AND sticky on scroll
+  — Links to a PDF (hosted on own domain or Dropbox/Google Drive)
+
+  CLIENTS / RECOGNITION STRIP (from nataliatimea.com):
+  — A horizontal scrolling ticker between Experience and Education
+  — Plain text names separated by "·" or thin vertical dividers
+  — Auto-scrolls left at ~30s loop, pauses on hover
+  — Content: notable companies worked with, publications, recognitions
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  12. PROJECTS SECTION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  Layout (from dousanmiao.com "Selected Works"):
+  — Section header: "Selected Works" or "Projects" in H2
+  — Sub-label: Year range e.g. "21'–25'" in muted small caps
+  — Stacked full-width cards OR alternating left/right layout
+  — 2 cards per row on desktop, 1 on mobile
+
+  Each Project Card Contains:
+  — Hero image (16:9 or 3:2 aspect ratio, full-bleed in card)
+  — Status badge: "SHIPPED" (green tint) / "IN PROGRESS" / "CONCEPT"
+  — Project title: H3 bold
+  — Subtitle: 1-line description
+  — Arrow icon: → for clickable link, 🔒 lock for private/NDA work
+  — Hover state: image scales up 1.03x, shadow increases
+
+  Project Card Variations:
+  — Public project: fully clickable → leads to project case study page
+  — Private/NDA: card shows "NOT SHARABLE" badge with lock icon, not clickable
+  — External project: arrow points outward (external link icon)
+
+  Section Actions:
+  — "View all projects →" link at bottom of the grid
+  — Optional filter tabs: "All · Web · Mobile · Open Source · Design"
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  13. CONTACT SECTION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  Style (from dousanmiao.com "Let's Talk" block):
+  — Large, minimal contact area — NOT a big form
+  — Primary CTA: giant clickable "Drop me a line →" with email link
+  — Secondary: LinkedIn profile link
+  — Section background: dark (#111111) to create contrast at page bottom
+
+  Content Structure:
+  1. Section label:   "Let's talk" or "Contact" in small caps
+  2. Main line:       "Drop me a line" as huge H2 with arrow icon
+  3. Email displayed: name@email.com (clickable mailto:)
+  4. Social links:    LinkedIn · GitHub · Twitter/X — icon row
+  5. Optional form:   Minimal 3-field form (Name, Email, Message) +
+                      "Send →" button (for users who don't want to open email)
+
+  Design Notes:
+  — This section sits just above the footer
+  — The large type treatment makes contact feel approachable and direct
+  — Arrow icon next to email animates on hover (slides right)
+  — Dark background with white text — inverted from rest of page
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  14. SCROLL AREAS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  Main Page Scroll:
+  — Standard smooth vertical scroll (scroll-behavior: smooth on html)
+  — NO full-page scroll-snapping — free continuous scroll like dousanmiao.com
+  — Nav scroll-spy: active link updates as sections enter viewport
+
+  Horizontal Scroll Areas (two instances):
+  ① Skills/Expertise Marquee (About section):
+     — Infinite horizontal auto-scroll, left direction
+     — Items: large 32–40px text, separated by "·" or slash
+     — Pauses on hover
+     — No scrollbar visible
+
+  ② Clients / Recognition Strip (Resume section):
+     — Same as above but smaller 14–16px text
+     — Slightly faster scroll speed
+     — Pauses on hover
+
+  Project Cards Scroll (mobile only):
+  — Horizontal swipe scroll on mobile (overflow-x: scroll, scroll-snap)
+  — Cards snap to center on mobile
+
+  Scroll Animations:
+  — Elements fade up (translateY: 24px → 0, opacity: 0 → 1)
+  — Triggered by IntersectionObserver at 15% threshold
+  — Staggered delay for card grids (100ms between cards)
+
+  Scrollbar Styling:
+  — Custom thin scrollbar: 4px wide, #CCCCCC thumb on light / #444 on dark
+  — Hidden on mobile (overflow: hidden or thin-only)
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  15. CALLS TO ACTION (CTAs)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  CTA Inventory (from both reference sites):
+
+  PRIMARY CTAs:
+  — "Drop me a line →"          → mailto: email link (hero + contact section)
+  — "Download CV ↓"             → PDF download link (resume section + nav)
+  — "View Project →"            → links on project cards
+
+  SECONDARY CTAs:
+  — "See all works →"           → scrolls to projects or goes to /projects
+  — "LinkedIn ↗"                → external link, opens new tab
+  — "Read Blog →"               → links to blog page (Page 2)
+
+  DESIGN PATTERNS:
+  ① Ghost Button (border only):
+     — border: 1.5px solid currentColor
+     — padding: 12px 24px
+     — border-radius: 999px
+     — hover: background fills, text inverts
+     — Used for: Download CV, View all
+
+  ② Text Link with Arrow:
+     — No border, no background
+     — Inline text + "→" icon
+     — Arrow slides right 4px on hover
+     — Used for: "Drop me a line", project links, nav links
+
+  ③ Pill Button (filled):
+     — background: #111111 (light) / #F0F0F0 (dark)
+     — color: #FFFFFF (light) / #111111 (dark)
+     — padding: 14px 28px
+     — Used for: primary CTA in hero
+
+  STICKY CTA:
+  — "↓ Download CV" button: position fixed, bottom-right corner
+  — Visible ONLY when resume section is in viewport
+  — Uses IntersectionObserver to show/hide
+  — Size: compact 40px height pill button
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  16. CARDS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  TYPE 1 — Project Card (dousanmiao.com reference):
+  — Width: full-width OR 50% in 2-col grid
+  — Structure:
+      [IMAGE — 16:9 or 3:2, full-bleed top]
+      [STATUS BADGE — "SHIPPED" green / "CONCEPT" gray / "LOCKED" with 🔒]
+      [→ or 🔒 ICON — top right corner overlay on image]
+      [PROJECT TITLE — H3 bold, 20–24px]
+      [DESCRIPTION — one line, muted text, 14–15px]
+  — Hover: slight shadow lift, image scale 1.03x (200ms ease)
+  — Border-radius: 12–16px
+  — background: white (light) / #1A1A1A (dark)
+
+  TYPE 2 — Blog Card (Page 2):
+  — Smaller, 3-column grid on desktop
+  — Structure:
+      [CATEGORY TAG — "Design", "Engineering", "Life"]
+      [TITLE — H3]
+      [DATE — muted small text]
+      [EXCERPT — 2 lines, clipped]
+      ["Read →" link]
+  — No image required (text-first)
+  — Optionally: feature card (1 wide + 2 small in a row)
+
+  TYPE 3 — Resume Experience Card:
+  — Not a card with background — more of a row/list item
+  — See Resume Section (Section 11) for full spec
+
+  TYPE 4 — Skill / Tool Pill:
+  — Inline chips inside about/resume section
+  — 28–32px height, border: 1px solid #DDD, border-radius: 999px
+  — Small font: 13px
+  — On dark mode: border: 1px solid #333
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  17. FOOTER
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  Reference (dousanmiao.com footer):
+  "Made with plenty of coffee · © 2026 Dousan Miao · London, United Kingdom
+   [LinkedIn ↗]"
+
+  Recommended Structure:
+  — Background: always dark (#111111) regardless of mode
+  — Text: white/light
+  — Two rows max:
+
+  Row 1 (main footer):
+  — Left:   Name wordmark + "© 2026"
+  — Center: Page nav links (About · Resume · Projects · Contact · Blog)
+  — Right:  Social icons (LinkedIn, GitHub, Twitter/X)
+
+  Row 2 (sub-footer):
+  — Left:   "Made with [tool/love/coffee] · [City, Country]"
+  — Right:  "↑ Back to top" link
+
+  Mobile Footer:
+  — Single column, center-aligned
+  — Name → Nav links (stacked) → Social icons → Copyright
+
+  Footer Typography:
+  — 13–14px, regular weight
+  — All white/light on dark background
+  — Links: opacity 0.7, hover: opacity 1.0
+
+  Footer Notes:
+  — dousanmiao.com uses "Made with plenty of coffee" — humanizes the footer
+  — nataliatimea.com uses clean social link row at bottom
+  — Both footers are compact (100–120px height) — no heavy footer grids
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  PAGE 2 — BLOG PAGE (ADDITIONAL SPEC)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  URL: /blog
+
+  Layout:
+  — Hero: Simple — "Blog" H1 title + short intro (1 sentence)
+  — Filter bar: Category pills ("All · Design · Engineering · Thoughts · Notes")
+  — Grid: 3-col on desktop, 2-col tablet, 1-col mobile
+  — Cards: Blog card type (see Cards section)
+
+  Individual Blog Post Page (/blog/[slug]):
+  — Max reading width: 680px centered
+  — Typography: serif body font for readability
+  — Table of contents: sticky on desktop left side
+  — Progress bar: thin horizontal bar at top showing scroll progress
+  — Footer: "← Previous" / "Next →" post navigation
+
+  Blog Design Notes:
+  — Keep it consistent with main portfolio aesthetic
+  — No heavy sidebars or ads
+  — Code blocks: dark background with syntax highlighting
+  — Image captions: italic, centered, muted
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  QUICK REFERENCE — SITE STRUCTURE SUMMARY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  PAGE 1 (index / home):
+    ├── Navbar (sticky)
+    ├── Hero
+    ├── About (#about)
+    ├── Resume (#resume)  ← scrollable, nataliatimea-style
+    ├── Projects (#projects)
+    ├── Contact (#contact)
+    └── Footer
+
+  PAGE 2 (/blog):
+    ├── Navbar (with ← Back link)
+    ├── Blog Hero (title + intro)
+    ├── Filter Bar
+    ├── Blog Post Grid
+    └── Footer
+
+  SHARED ELEMENTS:
+    — Dark/Light mode toggle (persistent via localStorage)
+    — Smooth scroll + IntersectionObserver animations
+    — Sticky Download CV button (visible in resume section only)
+    — Consistent font, color system via CSS custom properties
+
+================================================================================
+  END OF DOCUMENT — websiteinfo.txt
+  Sources analyzed: dousanmiao.com · nataliatimea.com/cv
+  Generated: April 2026
+================================================================================
+

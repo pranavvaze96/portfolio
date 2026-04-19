@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pranav Vaze — Product Manager</title>
+  <meta name="description"
+    content="Pranav Vaze — Product Manager specialising in AI-native products. Turning ambiguity into roadmaps and roadmaps into launches.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/sections.css">
+</head>
+
+<body>
+
+  <!-- ── THEME: apply before paint ─────────────────────────────────── -->
+  <script>
+    (function () {
+      const saved = localStorage.getItem('theme');
+      if (saved) {
+        document.documentElement.setAttribute('data-theme', saved);
+      } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+
+  <!-- ── SKIP LINK ──────────────────────────────────────────────────── -->
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <!-- ══════════════════════════════════════════════════════════════════
+       NAVBAR
+  ══════════════════════════════════════════════════════════════════════ -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <a href="#hero" class="nav-wordmark" aria-label="Pranav Vaze — home"><span class="nav-wordmark-first">Pranav</span><span class="nav-wordmark-last"> Vaze</span></a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about" data-section="about">About</a></li>
+        <li><a href="#resume" data-section="resume">Resume</a></li>
+        <li><a href="#projects" data-section="projects">Projects</a></li>
+        <li><a href="#contact" data-section="contact">Contact</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+      <div class="nav-right">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Switch to dark mode">
+          <span class="theme-seg theme-seg--light">☀</span>
+          <span class="theme-seg theme-seg--dark">🌙</span>
+        </button>
+        <a href="https://drive.google.com/file/d/1BAf2yKlgQ_WOQwx5iVLSrntzZ3sgivy-/view?usp=sharing" target="_blank"
+          rel="noopener noreferrer" class="btn-cv">Download CV ↓</a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"
+          aria-controls="mobile-overlay">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Overlay -->
+  <div class="mobile-overlay" id="mobile-overlay" role="dialog" aria-modal="true" aria-label="Navigation menu">
+    <ul class="mobile-nav-links">
+      <li><a href="#about" class="mobile-nav-link">About</a></li>
+      <li><a href="#resume" class="mobile-nav-link">Resume</a></li>
+      <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
+      <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+      <li><a href="blog.html" class="mobile-nav-link">Blog</a></li>
+    </ul>
+    <div class="mobile-theme-row">
+      <span>Theme</span>
+      <button class="theme-toggle" id="theme-toggle-mobile" aria-label="Switch to dark mode">
+        <span class="theme-seg theme-seg--light">☀</span>
+        <span class="theme-seg theme-seg--dark">🌙</span>
+      </button>
+    </div>
+    <a href="https://drive.google.com/file/d/1BAf2yKlgQ_WOQwx5iVLSrntzZ3sgivy-/view?usp=sharing" target="_blank"
+      rel="noopener noreferrer" class="btn-cv" style="margin-top:8px">Download CV ↓</a>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════════════
+       MAIN
+  ══════════════════════════════════════════════════════════════════════ -->
+  <main id="main">
+
+    <!-- ── HERO ──────────────────────────────────────────────────────── -->
+    <section id="hero" class="hero" aria-label="Hero">
+      <div id="hero-rain" aria-hidden="true"></div>
+      <div class="container">
+        <div class="hero-grid" id="hero-content">
+          <div class="hero-text">
+            <p class="hero-label reveal" id="hero-label" style="--delay:0ms">Hey — I'm Pranav</p>
+            <p class="hero-oneliner reveal" style="--delay:100ms">
+              A PM with a knack for AI products — turning ambiguity into roadmaps, and roadmaps into launches. I've
+              worked on everything from early-stage startups to large platforms.
+            </p>
+            <h1 class="hero-headline reveal" style="--delay:200ms">From messy<br>problems to<br>shipped products.</h1>
+            <div class="hero-meta">
+              <span class="hero-pill reveal" style="--delay:300ms">📍 Pune, India</span>
+              <a href="https://www.linkedin.com/in/pranavv11" target="_blank" rel="noopener noreferrer"
+                class="hero-linkedin reveal" style="--delay:380ms" aria-label="LinkedIn profile">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                </svg>
+                pranavv11
+              </a>
+              <div class="hero-cta reveal" style="--delay:460ms">
+                <span class="hero-cta-label">Let's talk</span>
+                <a href="mailto:pranav.vaze5@gmail.com" class="hero-cta-link">Drop me a line <span class="cta-arrow"
+                    aria-hidden="true">→</span></a>
+              </div>
+            </div>
+          </div>
+          <div class="hero-portrait reveal" style="--delay:150ms">
+            <img src="assets/images/pranav2.png" alt="Pranav Vaze" class="hero-photo" />
+            <span class="hero-initials hero-initials--fallback" aria-hidden="true">PV</span>
+          </div>
+        </div>
+        <p class="hero-scroll reveal" style="--delay:560ms" aria-hidden="true">SCROLL ↓</p>
+      </div>
+    </section>
+
+    <!-- ── ABOUT ─────────────────────────────────────────────────────── -->
+    <section id="about" class="about section-pad" aria-label="About">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-bio">
+            <p class="label about-label reveal">About</p>
+            <p class="reveal" style="--delay:80ms">
+              I'm a Product Manager who specialises in AI-native products. At MisticusMind, I own end-to-end product
+              lifecycle for two B2B SaaS platforms — ContractGenius.ai and TheLegalGenius.ai — from ideation through
+              iterative delivery. I work at the intersection of user needs, technical feasibility, and business
+              outcomes, translating complex requirements into clear roadmaps that teams can actually ship against.
+            </p>
+            <p class="reveal" style="--delay:160ms">
+              Before product management, I spent two years as a Technology Analyst at Accenture, building SAP enterprise
+              integrations — which means I can talk to engineers in their language. Outside work, I'm fascinated by how
+              AI is reshaping software products and spend time tinkering with LLM tooling and rapid prototyping.
+            </p>
+          </div>
+          <div>
+            <div class="about-portrait reveal" style="--delay:120ms">
+              <img src="assets/images/pranav.jpeg" alt="Pranav Vaze" class="about-photo" />
+              <span class="about-initials about-initials--fallback" aria-hidden="true">PV</span>
+              <p class="about-portrait-caption">Pranav Vaze · Product Manager</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-marquee-section reveal" style="--delay:200ms">
+          <p class="label about-marquee-label">What I Can Do</p>
+          <div class="marquee-wrapper" aria-label="Skills ticker" role="marquee">
+            <div class="marquee-zone marquee-zone--left"  aria-hidden="true"></div>
+            <div class="marquee-zone marquee-zone--right" aria-hidden="true"></div>
+            <div class="marquee-track" aria-hidden="true">
+              <!-- First set -->
+              <span class="marquee-item">Product Roadmapping</span><span class="marquee-sep">·</span>
+              <span class="marquee-item">Feature Prioritisation</span><span class="marquee-sep">·</span>
+              <span class="marquee-item">Requirements Elicitation</span><span class="marquee-sep">·</span>
+              <span class="marquee-item">Agile / Scrum</span><span class="marquee-sep">·</span>
+              <span class="marquee-item">Backlog Management</span><span class="marquee-sep">·</span>
+              <span class="marquee-item">User Story Writing</span><span class="marquee-sep">·</span>
+              <span class="marquee-item">UAT</span><span class="marquee-sep">·</span>
+              <span class="marquee-item">Go-to-Market</span><span class="marquee-sep">·</span>
+              <span class="marquee-item">RAG Pipelines</span><span class="marquee-sep">·</span>
+              <span class="marquee-item">Prompt Design</span><span class="marquee-sep">·</span>
+              <span class="marquee-item">Fine-tuning</span><span class="marquee-sep">·</span>
+              <span class="marquee-item">LLM Product Development</span><span class="marquee-sep">·</span>
+              <span class="marquee-item">AI Tooling</span><span class="marquee-sep">·</span>
+              <span class="marquee-item">Cross-functional Leadership</span><span class="marquee-sep">·</span>
+              <span class="marquee-item">Stakeholder Management</span><span class="marquee-sep">·</span>
+              <span class="marquee-item">Executive Communication</span><span class="marquee-sep">·</span>
+              <span class="marquee-item">Customer Engagement</span><span class="marquee-sep">·</span>
+              <!-- Duplicate for seamless loop -->
+              <span class="marquee-item">Product Roadmapping</span><span class="marquee-sep">·</span>
+              <span class="marquee-item">Feature Prioritisation</span><span class="marquee-sep">·</span>
+              <span class="marquee-item">Requirements Elicitation</span><span class="marquee-sep">·</span>
+              <span class="marquee-item">Agile / Scrum</span><span class="marquee-sep">·</span>
+              <span class="marquee-item">Backlog Management</span><span class="marquee-sep">·</span>
+              <span class="marquee-item">User Story Writing</span><span class="marquee-sep">·</span>
+              <span class="marquee-item">UAT</span><span class="marquee-sep">·</span>
+              <span class="marquee-item">Go-to-Market</span><span class="marquee-sep">·</span>
+              <span class="marquee-item">RAG Pipelines</span><span class="marquee-sep">·</span>
+              <span class="marquee-item">Prompt Design</span><span class="marquee-sep">·</span>
+              <span class="marquee-item">Fine-tuning</span><span class="marquee-sep">·</span>
+              <span class="marquee-item">LLM Product Development</span><span class="marquee-sep">·</span>
+              <span class="marquee-item">AI Tooling</span><span class="marquee-sep">·</span>
+              <span class="marquee-item">Cross-functional Leadership</span><span class="marquee-sep">·</span>
+              <span class="marquee-item">Stakeholder Management</span><span class="marquee-sep">·</span>
+              <span class="marquee-item">Executive Communication</span><span class="marquee-sep">·</span>
+              <span class="marquee-item">Customer Engagement</span><span class="marquee-sep">·</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── RESUME ────────────────────────────────────────────────────── -->
+    <section id="resume" class="resume section-pad" aria-label="Resume">
+      <div class="container">
+        <div class="resume-inner">
+          <div class="resume-header reveal">
+            <div class="resume-title-group">
+              <p class="label">Resume</p>
+              <h2>Experience &amp; Background</h2>
+            </div>
+          </div>
+
+          <!-- Profile -->
+          <div class="resume-section reveal" style="--delay:80ms">
+            <p class="resume-section-label">Profile</p>
+            <div class="resume-profile">
+              <p>Product Manager with 6+ years of combined experience in product management and enterprise technology. I
+                specialise in AI-powered SaaS products, agile delivery, and cross-functional team leadership. I've taken
+                products from zero to one, led enterprise POCs, and contributed to investor pitch decks — bringing both
+                strategic vision and hands-on execution to every role.</p>
+            </div>
+          </div>
+
+          <!-- Work Experience -->
+          <div class="resume-section">
+            <p class="resume-section-label reveal">Work Experience</p>
+
+            <div class="role-item" data-expanded="true">
+              <div class="role-header" role="button" tabindex="0" aria-expanded="true">
+                <div class="role-header-text">
+                  <p class="role-year">Aug 2024 – Present</p>
+                  <p class="role-title">Product Manager</p>
+                  <p class="role-company">
+                    <a href="https://misticusmind.com" target="_blank" rel="noopener noreferrer">
+                      MisticusMind — Pune, India
+                      <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M1 11L11 1M11 1H4M11 1v7"/></svg>
+                    </a>
+                  </p>
+                </div>
+                <span class="role-toggle" aria-hidden="true"></span>
+              </div>
+              <div class="role-body">
+                <div class="role-body-inner">
+                  <ul class="role-bullets">
+                    <li>Owned end-to-end product lifecycle for ContractGenius.ai (contract analysis &amp; insights) and TheLegalGenius.ai (legal research, case management &amp; drafting)</li>
+                    <li>Authored 20+ epics and 100+ user stories; maintained prioritised backlogs and achieved a 95% sprint completion rate across all sprints</li>
+                    <li>Led all agile ceremonies for a cross-functional India and US team of 17 across engineering, AI architecture, UX, and DevOps</li>
+                    <li>Drove 5 enterprise POCs end-to-end — discovery workshops, SOW drafting, UAT cycles, and formal customer handovers — influencing 5+ major client implementations</li>
+                    <li>Improved hybrid RAG architecture, prompt design, and fine-tuning based on UAT feedback, reducing response latency by 20% and inference cost by 30%</li>
+                    <li>Partnered with CEO, CTO, and CCSO on AI product strategy and investor pitch decks; coordinated SOC 2 readiness, closing ~100 control gaps within 2 months</li>
+                    <li>Spearheaded AI-assisted dev tooling (Cursor, Windsurf) and rapid-prototyping with Figma Make, cutting prototype-to-demo turnaround by 30%</li>
+                    <li>Delivered 5 third-party integrations (Salesforce, HubSpot, Google Drive, OneDrive, AWS, Razorpay) and led a full UI revamp achieving 60% improvement in user satisfaction scores</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="role-item" data-expanded="true">
+              <div class="role-header" role="button" tabindex="0" aria-expanded="true">
+                <div class="role-header-text">
+                  <p class="role-year">Jul 2023 – Jul 2024</p>
+                  <p class="role-title">Product Manager</p>
+                  <p class="role-company">Ommni.io — Seattle, USA</p>
+                </div>
+                <span class="role-toggle" aria-hidden="true"></span>
+              </div>
+              <div class="role-body">
+                <div class="role-body-inner">
+                  <ul class="role-bullets">
+                    <li>Created and prioritised the product backlog in Jira for a PIM software MVP; collaborated with engineering to streamline scope and reduce development time by 20%</li>
+                    <li>Presented the MVP to 5+ potential investors; gathered structured feedback and led iterative improvements that increased investor interest by 30%</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="role-item" data-expanded="true">
+              <div class="role-header" role="button" tabindex="0" aria-expanded="true">
+                <div class="role-header-text">
+                  <p class="role-year">Oct 2022 – Jun 2023</p>
+                  <p class="role-title">Product Manager</p>
+                  <p class="role-company">Microsoft for Startups — Seattle, USA</p>
+                </div>
+                <span class="role-toggle" aria-hidden="true"></span>
+              </div>
+              <div class="role-body">
+                <div class="role-body-inner">
+                  <ul class="role-bullets">
+                    <li>Orchestrated design and development of a Digital Address Infrastructure (DAI) GIS platform for Kenya, generating projected investments of $5M in the following fiscal year</li>
+                    <li>Defined the product roadmap and led a team of 8 developers and UX designers using Agile methodology</li>
+                    <li>Accelerated development by 30%, compressing time-to-market from 12 months to 8 months</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="role-item" data-expanded="true">
+              <div class="role-header" role="button" tabindex="0" aria-expanded="true">
+                <div class="role-header-text">
+                  <p class="role-year">Jun 2022 – Sep 2022</p>
+                  <p class="role-title">Product Management Intern</p>
+                  <p class="role-company">Velera — Seattle, USA</p>
+                </div>
+                <span class="role-toggle" aria-hidden="true"></span>
+              </div>
+              <div class="role-body">
+                <div class="role-body-inner">
+                  <ul class="role-bullets">
+                    <li>Managed core Agile ceremonies and built Azure DevOps dashboards to monitor sprint performance metrics across delivery teams</li>
+                    <li>Contributed to a 15% increase in sprint velocity over the internship period</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="role-item" data-expanded="true">
+              <div class="role-header" role="button" tabindex="0" aria-expanded="true">
+                <div class="role-header-text">
+                  <p class="role-year">Aug 2018 – Oct 2020</p>
+                  <p class="role-title">Technology Analyst</p>
+                  <p class="role-company">Accenture — Pune, India</p>
+                </div>
+                <span class="role-toggle" aria-hidden="true"></span>
+              </div>
+              <div class="role-body">
+                <div class="role-body-inner">
+                  <ul class="role-bullets">
+                    <li>Implemented custom SAP enterprise solutions (ABAP, HCM, FICO, OTC) for a US-based pharma client across 5+ releases, generating over $2M in client revenue</li>
+                    <li>Developed complex SQL reporting pipelines and SAP PI/PO integrations (XML, REST, SOAP, JSON) between SAP and third-party systems, increasing data accuracy by 20%</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Education -->
+          <div class="resume-section">
+            <p class="resume-section-label reveal">Education</p>
+
+            <div class="edu-item" data-expanded="true">
+              <div class="edu-header" role="button" tabindex="0" aria-expanded="true">
+                <div class="edu-header-text">
+                  <p class="edu-degree">Master of Science in Information Systems</p>
+                  <p class="edu-school">University of Washington, Seattle · 2022</p>
+                </div>
+                <span class="edu-toggle" aria-hidden="true"></span>
+              </div>
+              <div class="edu-body">
+                <div class="edu-body-inner">
+                  <p class="edu-desc">Focused on product strategy, data systems, and human-computer interaction — building a strong technical and business foundation for a career at the intersection of product and engineering.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="edu-item" data-expanded="true">
+              <div class="edu-header" role="button" tabindex="0" aria-expanded="true">
+                <div class="edu-header-text">
+                  <p class="edu-degree">Bachelor of Engineering in Information Technology</p>
+                  <p class="edu-school">University of Pune · 2018</p>
+                </div>
+                <span class="edu-toggle" aria-hidden="true"></span>
+              </div>
+              <div class="edu-body">
+                <div class="edu-body-inner">
+                  <p class="edu-desc">Gained foundational expertise in software engineering, databases, and enterprise systems — the technical bedrock that underpins everything I've built since.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tools & Stack -->
+          <div class="resume-section reveal" style="--delay:320ms">
+            <p class="resume-section-label">Tools &amp; Stack</p>
+            <div class="tools-pills">
+              <span class="tool-pill">Product Roadmapping</span>
+              <span class="tool-pill">Agile / Scrum</span>
+              <span class="tool-pill">Jira</span>
+              <span class="tool-pill">Confluence</span>
+              <span class="tool-pill">Azure DevOps</span>
+              <span class="tool-pill">Figma</span>
+              <span class="tool-pill">AWS</span>
+              <span class="tool-pill">Postman</span>
+              <span class="tool-pill">Swagger</span>
+              <span class="tool-pill">PowerBI</span>
+              <span class="tool-pill">Python</span>
+              <span class="tool-pill">SQL</span>
+              <span class="tool-pill">RAG Pipelines</span>
+              <span class="tool-pill">Prompt Design</span>
+              <span class="tool-pill">LLM Fine-tuning</span>
+              <span class="tool-pill">SAP ERP</span>
+              <span class="tool-pill">REST / SOAP APIs</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── PROJECTS ───────────────────────────────────────────────────── -->
+    <section id="projects" class="projects section-pad" aria-label="Projects">
+      <div class="container">
+        <div class="projects-header">
+          <div class="projects-title-group reveal">
+            <p class="label">Selected Works</p>
+            <h2>'24–'25</h2>
+          </div>
+          <p class="projects-sub reveal" style="--delay:80ms">Adding projects soon</p>
+        </div>
+        <div class="projects-grid">
+          <article class="project-card reveal" style="--delay:0ms" aria-label="Project coming soon">
+            <div class="card-image">
+              <span class="card-placeholder-text" aria-hidden="true">Soon</span>
+              <span class="card-badge">CONCEPT</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Coming Soon</h3>
+              <p class="card-desc">Projects will be added shortly.</p>
+              <div class="card-tags">
+                <span class="tag">Product Design</span>
+                <span class="tag">AI</span>
+              </div>
+            </div>
+          </article>
+          <article class="project-card reveal" style="--delay:100ms" aria-label="Project coming soon">
+            <div class="card-image">
+              <span class="card-placeholder-text" aria-hidden="true">Soon</span>
+              <span class="card-badge">CONCEPT</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Coming Soon</h3>
+              <p class="card-desc">Projects will be added shortly.</p>
+              <div class="card-tags">
+                <span class="tag">SaaS</span>
+                <span class="tag">Product</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CONTACT ───────────────────────────────────────────────────── -->
+    <section id="contact" class="contact section-pad" aria-label="Contact">
+      <div class="container">
+        <div class="contact-inner">
+          <p class="contact-eyebrow reveal">Let's talk</p>
+          <a href="mailto:pranav.vaze5@gmail.com" class="contact-cta reveal" style="--delay:80ms"
+            aria-label="Send email to Pranav Vaze">
+            Drop me a line
+            <span class="contact-cta-arrow" aria-hidden="true">→</span>
+          </a>
+          <p class="contact-email reveal" style="--delay:160ms">pranav.vaze5@gmail.com</p>
+          <div class="contact-socials reveal" style="--delay:240ms">
+            <a href="https://www.linkedin.com/in/pranavv11" target="_blank" rel="noopener noreferrer"
+              class="contact-social-link" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+              </svg>
+              LinkedIn
+            </a>
+            <a href="https://github.com/pranavv96" target="_blank" rel="noopener noreferrer" class="contact-social-link"
+              aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+              </svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════════════════════════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-row">
+        <span class="footer-copy">Pranav Vaze · © 2026</span>
+        <nav aria-label="Footer navigation">
+          <ul class="footer-nav">
+            <li><a href="#about">About</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </nav>
+        <div class="footer-links">
+          <a href="https://www.linkedin.com/in/pranavv11" target="_blank" rel="noopener noreferrer"
+            aria-label="LinkedIn">
+            LinkedIn
+            <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"
+              aria-hidden="true">
+              <path d="M1 11L11 1M11 1H4M11 1v7" />
+            </svg>
+          </a>
+          <a href="https://github.com/pranavv96" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            GitHub
+            <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"
+              aria-hidden="true">
+              <path d="M1 11L11 1M11 1H4M11 1v7" />
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-row">
+        <button class="footer-top" id="back-to-top" aria-label="Back to top">↑ Back to top</button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── STICKY CV BUTTON ───────────────────────────────────────────── -->
+  <a href="https://drive.google.com/file/d/1BAf2yKlgQ_WOQwx5iVLSrntzZ3sgivy-/view?usp=sharing" target="_blank"
+    rel="noopener noreferrer" class="sticky-cv-btn" id="sticky-cv" aria-label="Download CV">
+    Download CV ↓
+  </a>
+
+  <!-- ── SCRIPTS ─────────────────────────────────────────────────── -->
+  <script src="js/theme.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/marquee.js"></script>
+  <script src="js/hero-rain.js"></script>
+  <script src="js/cursor.js"></script>
+
+</body>
+
+</html>
