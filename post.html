@@ -4,9 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog — Pranav Vaze</title>
-  <meta name="description"
-    content="Writing on AI products, product management, and building things that actually ship.">
+  <title>Post — Pranav Vaze</title>
+  <meta name="description" content="Blog post by Pranav Vaze.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -35,16 +34,16 @@
   </script>
 
   <!-- ── SKIP LINK ──────────────────────────────────────────────────── -->
-  <a href="#blog-main" class="skip-link">Skip to content</a>
+  <a href="#post-main" class="skip-link">Skip to content</a>
 
   <!-- ══════════════════════════════════════════════════════════════════
        NAVBAR
   ══════════════════════════════════════════════════════════════════════ -->
   <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
     <div class="container">
-      <a href="index.html" class="nav-wordmark" aria-label="Back to Pranav Vaze portfolio">← <span class="nav-wordmark-first">Pranav</span><span class="nav-wordmark-last"> Vaze</span></a>
+      <a href="blog.html" class="nav-wordmark" aria-label="Back to Blog">← <span class="nav-wordmark-first">Blog</span></a>
       <ul class="nav-links" id="nav-links">
-        <li><span class="nav-blog-active">Blog</span></li>
+        <li><span class="nav-blog-active">Post</span></li>
       </ul>
       <div class="nav-right">
         <button class="theme-toggle" id="theme-toggle" aria-label="Switch to dark mode">
@@ -62,7 +61,8 @@
   <!-- Mobile Overlay -->
   <div class="mobile-overlay" id="mobile-overlay" role="dialog" aria-modal="true" aria-label="Navigation menu">
     <ul class="mobile-nav-links">
-      <li><a href="index.html" class="mobile-nav-link">← Back to Portfolio</a></li>
+      <li><a href="blog.html" class="mobile-nav-link">← Back to Blog</a></li>
+      <li><a href="index.html" class="mobile-nav-link">Portfolio</a></li>
     </ul>
     <div class="mobile-theme-row">
       <span>Theme</span>
@@ -76,48 +76,17 @@
   <!-- ══════════════════════════════════════════════════════════════════
        MAIN
   ══════════════════════════════════════════════════════════════════════ -->
-  <main id="blog-main">
+  <main id="post-main">
 
-    <!-- ── GALLERY VIEW ──────────────────────────────────────────────── -->
-    <div id="gallery-view">
-
-      <!-- Hero text header -->
-      <header class="blog-hero-header">
-        <div class="container">
-          <p class="label blog-label reveal">WRITING</p>
-          <h1 class="blog-hero-title reveal" style="--delay:80ms">Notes from the field.</h1>
-          <p class="blog-hero-sub reveal" style="--delay:160ms">
-            Thinking out loud on AI products, strategy, and the craft of
-            building things that actually ship.
-          </p>
-          <p class="blog-scroll-hint reveal" style="--delay:240ms">
-            <span class="blog-scroll-hint-desktop">Scroll to spin the gallery · Click a card to read</span>
-            <span class="blog-scroll-hint-mobile">Tap a card to read</span>
-          </p>
-        </div>
-      </header>
-
-      <!-- ── 3D Circular Gallery (desktop) ─────────────────────────── -->
-      <div class="gallery-scroll-container" id="gallery-scroll" aria-hidden="true">
-        <div class="gallery-sticky">
-          <div class="gallery-scene">
-            <div class="gallery-3d" id="gallery-3d"></div>
-          </div>
-          <p class="gallery-inner-hint" id="gallery-inner-hint">
-            <span class="gallery-inner-icon">↕</span> Scroll to rotate
-          </p>
-        </div>
+    <div class="post-back-bar">
+      <div class="container">
+        <a class="post-back-btn" href="blog.html" aria-label="Back to all posts">← All Posts</a>
       </div>
+    </div>
 
-      <!-- ── Mobile list (hidden on desktop) ───────────────────────── -->
-      <section class="blog-mobile-section" aria-label="All posts">
-        <div class="container">
-          <ul class="blog-mobile-list" id="blog-mobile-list" role="list"></ul>
-        </div>
-      </section>
-
-    </div><!-- /#gallery-view -->
-
+    <article class="post-article" id="post-article" role="article">
+      <!-- Injected by blog.js based on ?id= query param -->
+    </article>
 
   </main>
 
@@ -133,7 +102,7 @@
           <a href="index.html#resume">Resume</a>
           <a href="index.html#projects">Projects</a>
           <a href="index.html#contact">Contact</a>
-          <a href="blog.html" aria-current="page">Blog</a>
+          <a href="blog.html">Blog</a>
         </nav>
         <div class="footer-social">
           <a href="https://www.linkedin.com/in/pranavv11" target="_blank" rel="noopener noreferrer"

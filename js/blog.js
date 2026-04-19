@@ -381,212 +381,155 @@ const posts = [
 ];
 
 /* ═══════════════════════════════════════════════════════════════════
-   GALLERY SETUP
+   GALLERY PAGE
 ═══════════════════════════════════════════════════════════════════ */
-const gallery3d = document.getElementById('gallery-3d');
-const galleryScroll = document.getElementById('gallery-scroll');
+const gallery3d        = document.getElementById('gallery-3d');
+const galleryScroll    = document.getElementById('gallery-scroll');
 const galleryInnerHint = document.getElementById('gallery-inner-hint');
-const galleryView = document.getElementById('gallery-view');
-const postView = document.getElementById('post-view');
-const postArticle = document.getElementById('post-article');
-const postBackBtn = document.getElementById('post-back-btn');
 
-const RADIUS = window.innerWidth < 1100 ? 390 : 480;
-const ANGLE_STEP = 360 / posts.length;
-const AUTO_SPEED = 0.04; // deg per frame
+if (gallery3d) {
+  const RADIUS     = window.innerWidth < 1100 ? 390 : 480;
+  const ANGLE_STEP = 360 / posts.length;
+  const AUTO_SPEED = 0.04;
 
-let rotation = 0;
-let isScrolling = false;
-let scrollTimer = null;
-let rafId = null;
-let postIsOpen = false;
+  let rotation   = 0;
+  let isScrolling = false;
+  let scrollTimer = null;
 
-/* ── Build gallery cards ──────────────────────────────────────────── */
-function buildGallery() {
-  posts.forEach((post, i) => {
-    const btn = document.createElement('button');
-    btn.className = 'gallery-card-3d';
-    btn.setAttribute('aria-label', `Read: ${post.title}`);
-    btn.dataset.postId = post.id;
+  /* ── Build gallery cards ────────────────────────────────────────── */
+  function buildGallery() {
+    posts.forEach((post, i) => {
+      const btn = document.createElement('button');
+      btn.className = 'gallery-card-3d';
+      btn.setAttribute('aria-label', `Read: ${post.title}`);
+      btn.dataset.postId = post.id;
 
-    const angle = i * ANGLE_STEP;
-    btn.style.transform = `rotateY(${angle}deg) translateZ(${RADIUS}px)`;
+      btn.style.transform = `rotateY(${i * ANGLE_STEP}deg) translateZ(${RADIUS}px)`;
 
-    btn.innerHTML = `
-      <div class="gallery-card-inner" style="background: ${post.gradient};">
-        <span class="gallery-card-category">${post.category}</span>
-        <div class="gallery-card-footer">
-          <h3 class="gallery-card-title">${post.title}</h3>
-          <span class="gallery-card-meta">${post.date} · ${post.readTime} read</span>
+      btn.innerHTML = `
+        <div class="gallery-card-inner" style="background: ${post.gradient};">
+          <span class="gallery-card-category">${post.category}</span>
+          <div class="gallery-card-footer">
+            <h3 class="gallery-card-title">${post.title}</h3>
+            <span class="gallery-card-meta">${post.date} · ${post.readTime} read</span>
+          </div>
         </div>
-      </div>
-    `;
+      `;
 
-    btn.addEventListener('click', () => openPost(post.id));
-    gallery3d.appendChild(btn);
-  });
-}
-
-/* ── Build mobile list ────────────────────────────────────────────── */
-function buildMobileList() {
-  const list = document.getElementById('blog-mobile-list');
-  posts.forEach(post => {
-    const li = document.createElement('li');
-    li.className = 'blog-mobile-item';
-
-    const btn = document.createElement('button');
-    btn.className = 'blog-mobile-card';
-    btn.setAttribute('aria-label', `Read: ${post.title}`);
-    btn.innerHTML = `
-      <p class="blog-mobile-category">${post.category}</p>
-      <h2 class="blog-mobile-title">${post.title}</h2>
-      <p class="blog-mobile-excerpt">${post.excerpt}</p>
-      <div class="blog-mobile-meta">
-        <span>${post.date}</span>
-        <span class="blog-mobile-meta-dot"></span>
-        <span>${post.readTime} read</span>
-      </div>
-    `;
-    btn.addEventListener('click', () => openPost(post.id));
-
-    li.appendChild(btn);
-    list.appendChild(li);
-  });
-}
-
-/* ═══════════════════════════════════════════════════════════════════
-   GALLERY ANIMATION LOOP
-═══════════════════════════════════════════════════════════════════ */
-function applyRotation() {
-  gallery3d.style.transform = `rotateY(${rotation}deg)`;
-
-  const cards = gallery3d.querySelectorAll('.gallery-card-3d');
-  cards.forEach((card, i) => {
-    const cardAngle = i * ANGLE_STEP;
-    const combined = ((cardAngle + rotation) % 360 + 360) % 360;
-    const facingAngle = combined > 180 ? 360 - combined : combined;
-    card.style.opacity = Math.max(0.12, 1 - facingAngle / 190);
-  });
-}
-
-function autoRotateLoop() {
-  if (!isScrolling && !postIsOpen) {
-    rotation += AUTO_SPEED;
-    applyRotation();
-  }
-  rafId = requestAnimationFrame(autoRotateLoop);
-}
-
-/* Scroll drives rotation when user scrolls through the sticky section */
-window.addEventListener('scroll', () => {
-  if (postIsOpen) return;
-
-  const rect = galleryScroll.getBoundingClientRect();
-  const scrollable = galleryScroll.offsetHeight - window.innerHeight;
-  const scrolled = Math.max(0, -rect.top);
-  const progress = Math.min(1, scrolled / scrollable);
-  rotation = progress * 420; // slightly more than one full spin
-
-  isScrolling = true;
-  clearTimeout(scrollTimer);
-  scrollTimer = setTimeout(() => { isScrolling = false; }, 200);
-
-  // Hide scroll hint once user has started scrolling
-  if (scrolled > 60) {
-    galleryInnerHint.classList.add('hidden');
-  } else {
-    galleryInnerHint.classList.remove('hidden');
+      btn.addEventListener('click', () => {
+        window.location.href = `post.html?id=${post.id}`;
+      });
+      gallery3d.appendChild(btn);
+    });
   }
 
-  applyRotation();
-}, { passive: true });
+  /* ── Build mobile list ──────────────────────────────────────────── */
+  function buildMobileList() {
+    const list = document.getElementById('blog-mobile-list');
+    posts.forEach(post => {
+      const li  = document.createElement('li');
+      li.className = 'blog-mobile-item';
 
-/* ═══════════════════════════════════════════════════════════════════
-   OPEN / CLOSE POST
-═══════════════════════════════════════════════════════════════════ */
-function openPost(postId) {
-  const post = posts.find(p => p.id === postId);
-  if (!post) return;
-
-  postIsOpen = true;
-
-  // Inject content
-  postArticle.innerHTML = `
-    <div class="post-header">
-      <div class="post-header-tint" style="background: ${post.gradient};"></div>
-      <div class="container">
-        <span class="post-category-tag">${post.category}</span>
-        <h1 class="post-title">${post.title}</h1>
-        <div class="post-meta-row">
+      const btn = document.createElement('button');
+      btn.className = 'blog-mobile-card';
+      btn.setAttribute('aria-label', `Read: ${post.title}`);
+      btn.innerHTML = `
+        <p class="blog-mobile-category">${post.category}</p>
+        <h2 class="blog-mobile-title">${post.title}</h2>
+        <p class="blog-mobile-excerpt">${post.excerpt}</p>
+        <div class="blog-mobile-meta">
           <span>${post.date}</span>
-          <span class="post-meta-sep"></span>
+          <span class="blog-mobile-meta-dot"></span>
           <span>${post.readTime} read</span>
         </div>
-      </div>
-    </div>
-    <div class="post-body">
-      ${post.content}
-    </div>
-    <div class="post-end-rule">
-      <hr>
-      <div class="post-end-cta">
-        <p class="post-end-label">That's a wrap</p>
-        <button class="post-end-link" id="post-end-back">← Back to all posts</button>
-      </div>
-    </div>
-  `;
-
-  // Wire up the bottom back link
-  document.getElementById('post-end-back').addEventListener('click', closePost);
-
-  // Fade out gallery, then show post
-  galleryView.style.transition = 'opacity 0.35s ease';
-  galleryView.style.opacity = '0';
-  galleryView.style.pointerEvents = 'none';
-
-  setTimeout(() => {
-    galleryView.style.display = 'none';
-    postView.classList.remove('post-view--hidden');
-    postView.removeAttribute('aria-hidden');
-    postView.classList.add('post-view--fading');
-
-    window.scrollTo({ top: 0, behavior: 'instant' });
-
-    requestAnimationFrame(() => {
-      requestAnimationFrame(() => {
-        postView.classList.remove('post-view--fading');
+      `;
+      btn.addEventListener('click', () => {
+        window.location.href = `post.html?id=${post.id}`;
       });
+
+      li.appendChild(btn);
+      list.appendChild(li);
     });
-  }, 360);
-}
+  }
 
-function closePost() {
-  postView.classList.add('post-view--fading');
-
-  setTimeout(() => {
-    postView.classList.add('post-view--hidden');
-    postView.setAttribute('aria-hidden', 'true');
-
-    galleryView.style.display = '';
-    galleryView.style.opacity = '0';
-    galleryView.style.pointerEvents = '';
-
-    window.scrollTo({ top: 0, behavior: 'instant' });
-
-    requestAnimationFrame(() => {
-      requestAnimationFrame(() => {
-        galleryView.style.opacity = '1';
-        postIsOpen = false;
-      });
+  /* ── Animation loop ─────────────────────────────────────────────── */
+  function applyRotation() {
+    gallery3d.style.transform = `rotateY(${rotation}deg)`;
+    gallery3d.querySelectorAll('.gallery-card-3d').forEach((card, i) => {
+      const combined    = ((i * ANGLE_STEP + rotation) % 360 + 360) % 360;
+      const facingAngle = combined > 180 ? 360 - combined : combined;
+      card.style.opacity = Math.max(0.12, 1 - facingAngle / 190);
     });
-  }, 360);
-}
+  }
 
-postBackBtn.addEventListener('click', closePost);
+  function autoRotateLoop() {
+    if (!isScrolling) {
+      rotation += AUTO_SPEED;
+      applyRotation();
+    }
+    requestAnimationFrame(autoRotateLoop);
+  }
+
+  /* ── Scroll drives rotation ─────────────────────────────────────── */
+  window.addEventListener('scroll', () => {
+    const rect      = galleryScroll.getBoundingClientRect();
+    const scrollable = galleryScroll.offsetHeight - window.innerHeight;
+    const scrolled  = Math.max(0, -rect.top);
+    const progress  = Math.min(1, scrolled / scrollable);
+    rotation        = progress * 420;
+
+    isScrolling = true;
+    clearTimeout(scrollTimer);
+    scrollTimer = setTimeout(() => { isScrolling = false; }, 200);
+
+    if (scrolled > 60) galleryInnerHint.classList.add('hidden');
+    else               galleryInnerHint.classList.remove('hidden');
+
+    applyRotation();
+  }, { passive: true });
+
+  buildGallery();
+  buildMobileList();
+  autoRotateLoop();
+}
 
 /* ═══════════════════════════════════════════════════════════════════
-   INIT
+   POST PAGE  (post.html?id=xxx)
 ═══════════════════════════════════════════════════════════════════ */
-buildGallery();
-buildMobileList();
-autoRotateLoop();
+const postArticleEl = document.getElementById('post-article');
+
+if (postArticleEl && !gallery3d) {
+  const id   = new URLSearchParams(window.location.search).get('id');
+  const post = posts.find(p => p.id === id);
+
+  if (!post) {
+    window.location.replace('blog.html');
+  } else {
+    document.title = `${post.title} — Pranav Vaze`;
+
+    postArticleEl.innerHTML = `
+      <div class="post-header">
+        <div class="post-header-tint" style="background: ${post.gradient};"></div>
+        <div class="container">
+          <span class="post-category-tag">${post.category}</span>
+          <h1 class="post-title">${post.title}</h1>
+          <div class="post-meta-row">
+            <span>${post.date}</span>
+            <span class="post-meta-sep"></span>
+            <span>${post.readTime} read</span>
+          </div>
+        </div>
+      </div>
+      <div class="post-body">
+        ${post.content}
+      </div>
+      <div class="post-end-rule">
+        <hr>
+        <div class="post-end-cta">
+          <p class="post-end-label">That's a wrap</p>
+          <a class="post-end-link" href="blog.html">← Back to all posts</a>
+        </div>
+      </div>
+    `;
+  }
+}
