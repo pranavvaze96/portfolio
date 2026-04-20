@@ -505,7 +505,18 @@ if (postArticleEl && !gallery3d) {
   if (!post) {
     window.location.replace('blog.html');
   } else {
+    const pageUrl = `https://pranavvaze96.github.io/portfolio/post.html?id=${post.id}`;
+
     document.title = `${post.title} — Pranav Vaze`;
+
+    const setMeta = (id, attr, val) => { const el = document.getElementById(id); if (el) el.setAttribute(attr, val); };
+    setMeta('meta-description', 'content', post.excerpt);
+    setMeta('canonical',        'href',    pageUrl);
+    setMeta('og-url',           'content', pageUrl);
+    setMeta('og-title',         'content', `${post.title} — Pranav Vaze`);
+    setMeta('og-description',   'content', post.excerpt);
+    setMeta('twitter-title',    'content', `${post.title} — Pranav Vaze`);
+    setMeta('twitter-description', 'content', post.excerpt);
 
     postArticleEl.innerHTML = `
       <div class="post-header">
