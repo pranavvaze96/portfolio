@@ -14,6 +14,15 @@ function setTheme(theme) {
     dark.classList.toggle('theme-seg--active',  theme === 'dark');
     btn.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
   });
+
+  // Swap favicon with theme
+  const favicon = document.getElementById('favicon');
+  if (favicon) {
+    const base = favicon.href.split('/assets/')[0];
+    favicon.href = theme === 'dark'
+      ? base + '/assets/images/favicon2.png'
+      : base + '/assets/images/favicon.png';
+  }
 }
 
 // Sync with theme already applied before paint
