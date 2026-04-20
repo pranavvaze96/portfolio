@@ -505,7 +505,7 @@ if (postArticleEl && !gallery3d) {
   if (!post) {
     window.location.replace('blog.html');
   } else {
-    const pageUrl = `https://pranavvaze96.github.io/portfolio/post.html?id=${post.id}`;
+    const pageUrl = `https://pranavvaze.netlify.app/post.html?id=${post.id}`;
 
     document.title = `${post.title} — Pranav Vaze`;
 

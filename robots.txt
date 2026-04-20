@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://pranavvaze96.github.io/portfolio/sitemap.xml
+Sitemap: https://pranavvaze.netlify.app/sitemap.xml
